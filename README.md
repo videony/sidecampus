@@ -57,7 +57,7 @@ Current version is 1.0.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/videony/sidecampus/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
@@ -68,7 +68,7 @@ See also the list of [contributors](https://github.com/videony/sidecampus/contri
 
 ## License
 
-This project is licensed under the Mozilla Public License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Mozilla Public License - see the [LICENSE.md](https://github.com/videony/sidecampus/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
