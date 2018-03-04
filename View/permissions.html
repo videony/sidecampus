@@ -1,0 +1,30 @@
+
+<div class="formwrapper permswrapper"> 
+    <fieldset class="formbox" style="width: 450px">
+        <legend>FICHIERS <img src="media/icons/folder.png" alt="" /> </legend>
+        ###FILE_PERMISSIONS###
+    </fieldset>
+    <fieldset class="formbox" style="width: 450px">
+        <legend>CALENDRIER <img src="media/icons/date.png" alt="" /> </legend>
+        ###EVENT_PERMISSIONS###
+    </fieldset>
+</div>
+<div class="formwrapper permswrapper"> 
+    <fieldset class="formbox" style="width: 450px">
+        <legend>FORUM <img src="media/icons/comment.png" alt="" /> </legend>
+        ###FORUM_PERMISSIONS###
+    </fieldset>
+    <fieldset class="formbox" style="width: 450px">
+        <legend>GESTION DE LA PLATEFORME <img src="media/icons/monitor.png" alt="" /> </legend>
+        ###MANAGE_PERMISSIONS###
+    </fieldset>
+</div>
+        <div class="buttonwrapper">
+            <button class="button left" onclick="defineDefaultPerms(###ID_MEMBRE###)">
+                Rétablir aux valeurs par défaut
+            </button>
+            <button class="button" onclick="savePermissions(###ID_MEMBRE###)">
+                <img src="media/icons/disk.png" alt=""/>
+                Sauvegarder les modifications
+            </button>
+        </div>

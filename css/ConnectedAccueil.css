@@ -1,0 +1,248 @@
+.activity
+{
+    float: right;
+    width: 350px;
+    border: 1px solid #001F3E;
+    padding: 10px;background: #F0F8FF url(images/fond_div.png) top left repeat-x;
+    border-radius: 0px;
+    margin-left: 10px;
+}
+.news
+{
+    float: left;
+    margin: 10px 0px 0px 0px;
+    width: 98%;
+    border: 1px solid #001F3E;
+    padding: 10px;background: #F0F8FF url(images/fond_div.png) top left repeat-x;
+    overflow: auto;
+}
+.utils
+{
+    //float: left;
+    //width: 30%;
+    border: 1px solid #001F3E;
+    padding: 10px;background: #F0F8FF url(images/fond_div.png) top left repeat-x;
+}
+.link
+{
+    font-family: Arial;
+    border: 1px solid #001F3E;
+    border-radius: 5px;
+    color:#001F3E;
+    padding:5px;
+    line-height:20px;
+    background: #EAF4FF;
+    font-size:14px;
+    margin: 10px;
+    float: left;
+    width: 110px;
+}
+.link:hover
+{
+    cursor: pointer;
+    background-color:#6582A0;
+    color:white;
+    text-decoration: none;
+}
+.title
+{
+    border: 1px solid #001F3E;
+    padding: 5px;
+    background: #FFFF80;
+    background: linear-gradient(#FFFF80, #FF8000);
+    color: black;
+    font-size: 18px;
+    font-style: italic;
+}
+.new a
+{
+    text-decoration: underline;
+}
+.platform_message
+{
+    border: 1px solid #001F3E;
+    border-radius: 5px;
+    color:#001F3E;
+    padding:2px;
+    line-height:20px;
+    background: #EAF4FF;
+    font-size:12px;
+    margin-top: 10px;
+}
+.platform_message p.login
+{
+    font-weight: bold;
+    margin: 8px;
+}
+.platform_message p.message
+{
+    margin: 6px;
+    margin-top: 17px;
+}
+.delete_message, .show_full_message
+{
+    cursor: pointer;
+}
+.commandwrapper
+{
+    float: right;
+    text-align: right;
+    margin: 5px;
+    background-color: #EAF4FF;
+    height: 22px;
+    font-family: FontAwesome !important;
+}
+.biggable, .smallable
+{
+    border-top: 1px dotted black;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.expand_container
+{
+    width: 500px;
+    font-family: Arial;
+    border: 2px solid #001F3E;
+    border-radius: 5px;
+    color:#001F3E;
+    padding:10px;
+    line-height:20px;
+    background: #EAF4FF;
+    font-size:14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.write_platform_message
+{
+    cursor: pointer;
+    float: right;
+    padding: 3px;
+}
+write_platform_message:hover
+{
+    opacity: 1;
+}
+#pl_message_form
+{
+    display: none;
+    text-align: center;
+}
+#new_platform_message
+{
+    width: 300px;
+    height: 100px;
+}
+#write_message
+{
+    font-weight: normal !important;
+    font-size: 12px !important;
+}
+.write_message_container
+{
+    width: 310px;
+    font-family: Arial;
+    border: 2px solid #001F3E;
+    border-radius: 5px;
+    color:#001F3E;
+    padding:20px;
+    line-height:20px;
+    background: #EAF4FF;
+    font-size:16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buttonwrapper
+{
+    padding: 0px !important;
+}
+.img_descr
+{
+    text-align: center;
+}
+.img_descr img
+{
+    border: 1px solid black;
+    margin: 10px;
+}
+.tile
+{
+    display: inline-block;
+    padding: 1%;
+    background: #415567;
+    border: 1px solid #001F3E;
+    width: 42%;
+    margin: 1%;
+    color: #CDD7E0;
+}
+.tile:hover, .long_tile:hover
+{
+    color: #001F3E;
+    background: #CDD7E0;
+}
+.long_tile
+{
+    display: inline-block;
+    padding: 1%;
+    background: #415567;
+    border: 1px solid #001F3E;
+    width: 90%;
+    margin: 1%;
+    color: #CDD7E0;
+}
+.orange
+{
+    background: #e17009;
+    color: #FFFF80;
+}
+.red
+{
+    background: darkred;
+    color: sandybrown;
+}
+.green
+{
+    background: darkgreen;
+    color: lightgreen;
+}
+.purple
+{
+    background: indigo;
+    color: plum;
+}
+.platform_message_commands
+{
+    float: right;
+    border: 1px dotted black;
+    padding: 2px;
+    color: black !important;
+    font-family: FontAwesome !important;
+}
+#popup_news_message
+{
+    display: none;
+}
+.featherlight-content, .featherlight-inner, .message_content {
+    background: #CDD7E0 !important;
+    height: auto !important;
+}
+@media only screen and (max-device-width: 1200px)
+{
+    #accueil_menu
+    {
+        display: none;
+    }
+}
+@media only screen and (max-device-width: 900px)
+{
+    .utils, .fun, .news
+    {
+        width: 93% !important;
+        height: auto !important;
+    }
+    .fun_elem
+    {
+        width: 98%;
+        height: auto !important;
+    }
+}

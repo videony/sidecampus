@@ -1,0 +1,43 @@
+<h1>Gestion de la plateforme</h1>
+<div class='buttonwrapper'>
+    <!-- ###IF_PLATFORM_HIDDEN### -->
+        <button id='show_platform' class='button'>
+            <span class='icon icon-16 icon-sun'></span>
+            Rendre la plateforme publique
+        </button>
+    <!-- ###IF_PLATFORM_HIDDEN### -->
+    <!-- ###IF_PLATFORM_NOT_HIDDEN### -->
+        <button id='hide_platform' class='button'>
+            <span class='icon icon-16 icon-moon'></span>
+            Cacher la plateforme au public
+        </button>
+    <!-- ###IF_PLATFORM_NOT_HIDDEN### -->
+</div>
+<!-- ###SUB_INFOS### -->
+
+<!-- ###SUB_INFOS### -->
+<br/>
+<form method="POST">
+  <div class="formwrapper">
+    <fieldset class="formbox" style="width:500px">
+         <legend><h3>Informations générales</h3></legend>
+         <!-- ###SUB_GENERAL### -->
+         
+         <!-- ###SUB_GENERAL### -->
+    </fieldset>
+    <fieldset class="formbox" style="width:500px">
+         <legend><h3>Informations de localisation</h3></legend>
+         <!-- ###SUB_LOCALISATION### -->
+         
+         <!-- ###SUB_LOCALISATION### -->
+    </fieldset>
+  </div>
+    <div class="buttonwrapper">
+        <button class="button">
+            <img src="media/icons/application_go.png" alt="" />
+            Sauvegarder les changements
+        </button>
+    </div>
+</form>
+<div class="clear"></div>
+

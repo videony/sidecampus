@@ -1,0 +1,47 @@
+<div class="quote-container"> 
+    <button class="button" id="add_button">
+        <img src="media/icons/add.png">
+        Ajouter un post-it
+    </button>
+    <div class="bigtitle">
+        <i class="pin"></i>
+        A faire...
+    </div>
+    <!-- ###SUB_ITEM### -->
+    <div class="note yellow ###CLASS###" id="###ID_TODO###">
+        <i class="pin"></i>
+        <div class="commands">
+            <img src="media/icons/pencil.png" class="tooltip edit" title="Editer le post-it"/>
+            <img src="media/icons/cross.png" class="tooltip remove" title="Supprimer"/>
+        </div>
+        <div class="deadline">
+            <img src="media/icons/date.png" />
+        <b>
+        <!-- ###IF_DEADLINE### -->
+        ###DEADLINE###
+        <!-- ###IF_DEADLINE### -->
+        </b>
+        </div>
+        <p>###TX_TODO###</p>
+      </div>
+    <!-- ###SUB_ITEM### -->
+     
+<div style="clear:both" id="clearer"></div>
+
+</div>
+<div id="add_form" style="display: none">
+    <div class="note yellow normal" id="new">
+        <i class="pin"></i>
+        <div class="commands">
+            <img src="media/icons/disk.png" class="tooltip save" title="Ajouter"/>
+            <img src="media/icons/cross.png" class="tooltip remove" title="Supprimer"/>
+        </div>
+        <div class="deadline">
+           <img src="media/icons/date.png" />
+           <span class="datefield_container">
+               <input type="text" value="" class="datefield"/>
+           </span>
+        </div>
+        <span class="notefield_container"><textarea class="note_textarea"></textarea></span>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+.topic {
+    font-size: 14px;
+}
+
+#forum
+{
+    margin:auto;  
+    margin-top:5px;
+    border-collapse: collapse;
+}
+
+#forum td, #forum th {
+   padding : 5px;
+   border: 1px solid black;   
+   
+} 
+
+.modDel{
+    float:right;
+}
+.commandwrapper
+{
+    display: inline-block;
+    position: relative;
+    color: black;
+    margin: 0px 10px 0px 10px;
+    height: 28px;
+    padding: 0px 5px 1px 5px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 3px;
+    background: #9AADC0;
+    border: 1px solid #617F9D;
+}
+.commandwrapper img
+{
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+

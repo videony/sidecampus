@@ -1,0 +1,65 @@
+###INFORMATION###
+<br/>
+<!-- ###IF_CREATE_PLATFORM_BUTTON### -->
+    <a href="request.php?action=PlatformCreate">
+        <button class="button" style="background: darksalmon">
+           <span class="icon icon-64 icon-chevron-right small-icon" style="width:30px"></span>
+           Créer une plateforme
+        </button>
+   </a>
+<!-- ###IF_CREATE_PLATFORM_BUTTON### -->
+<table id='platforms' class="sortIt">
+    <thead>
+        <tr>
+            <th data-placeholder="ID...">ID</th>
+            <th data-placeholder="Nom...">Nom</th>
+            <th data-placeholder="Année...">Année</th>
+            <th data-placeholder="Ecole...">Ecole</th>
+            <th data-placeholder="Ville...">Ville</th>
+            <th class = "filter-false">Membres</th>
+            <th class="filter-false"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ###SUB_PLATFORMS### -->
+            <!-- ###SUB_ITEM### -->
+			
+                <!-- ###IF_NOT_IN_PLATFORM### -->
+                    <tr id="###ID_PLATEFORME###" class="###BANNED_CLASS###"> 
+                <!-- ###IF_NOT_IN_PLATFORM### -->
+                <!-- ###IF_IN_PLATFORM### -->
+                    <tr id="###ID_PLATEFORME###" class="redirectPlatform" onclick="usePlatform(###ID_PLATEFORME###)"> 
+                <!-- ###IF_IN_PLATFORM### -->
+                <td>###ID_PLATEFORME###</td>                
+                <td>###TX_NOM###</td>
+                <td>###ANNEE###</td>
+                <td>###ECOLE###</td>
+                <td>###VILLE###</td>
+                <td>###NB_MEMBRES###</td>
+                <td>
+                    <!-- ###IF_NOT_AFFILIATED### -->
+                        <span class='icon icon-16 icon-plus-sign ask' style='color: green'></span>
+                    <!-- ###IF_NOT_AFFILIATED### -->
+                    <span class='icon icon-16 icon-eye-open view'></span>
+                    <!-- ###IF_AFFILIATED### -->
+                        <span class='icon icon-16 icon-remove-circle quit'></span>
+                    <!-- ###IF_AFFILIATED### -->
+                    <!-- ###IF_PENDING### -->
+                        <span class='icon spin icon-16 icon-cog tooltip' title='Demande envoyée mais pas encore acceptée'></span>
+                           <!-- ###IF_PENDING### -->
+                    <!-- ###IF_BANNED### -->
+                        <span class='icon icon-16 icon-power-off tooltip' title='Vous êtes banni de cette plateforme'></span>
+                    <!-- ###IF_BANNED### -->
+                    <!-- ###IF_BLOCKED### -->
+                        <span class='icon icon-16 icon-power-off tooltip' title='Vous êtes bloqué sur cette plateforme'></span>
+                    <!-- ###IF_BLOCKED### -->
+                    <!-- ###IF_NOTIFICATIONS### -->
+                        <span class='icon icon-16 icon-bell tooltip' title='Vous avez ###COMPTEURNOTIF### notifications(s)
+                             sur cette plateforme'></span>
+                    <!-- ###IF_NOTIFICATIONS### -->
+                </td>
+            </tr>
+            <!-- ###SUB_ITEM### -->
+        <!-- ###SUB_PLATFORMS### -->
+    </tbody>
+</table>

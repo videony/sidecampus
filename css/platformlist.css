@@ -1,0 +1,53 @@
+
+div.ui-tooltip {
+    width: auto;
+    max-width: none;
+}
+td img {
+    cursor: pointer;
+}
+.platformwrapper
+{
+    height: auto !important;
+    overflow: hidden;
+}
+tr.banned td
+{
+    background-color: lightgray;
+    color: black;
+    opacity: 0.5;
+}
+
+.redirectPlatform
+{
+    cursor: pointer;
+    font-weight: bold;
+}
+	
+.redirectPlatform:hover{	
+    background: #FFBD11 !important;
+    background: linear-gradient(#FFE6A4, #FFBD11) !important;
+    background: -webkit-linear-gradient(#FFE6A4, #FFBD11) !important;
+    font-weight: bold;
+    color: black;
+}
+@media only screen and (max-device-width: 900px)
+{
+    .button{
+        font-size: 10px;
+    }
+    table
+    {
+        max-width: 98%;
+    }
+    td
+    {
+        font-size: 10px;
+    }
+    td:first-child, th:first-child, 
+    td:nth-child(5), th:nth-child(5), 
+    td:nth-child(6), th:nth-child(6)
+    {
+        display: none;
+    }
+}

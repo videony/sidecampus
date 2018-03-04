@@ -1,0 +1,31 @@
+<div class="wrapper">   
+    <h2 class="etitle">###TX_TITRE###</h2>
+    (Evènement ###VISIBILITE###)
+    <p>
+        ###TX_DESCRIPTION###
+    </p>
+    <b>Commence:</b> ###DT_BEGIN###<br/>
+    <b>Finit:</b> ###DT_END###<br/><br/>
+    <!-- ###IF_CAN_SEE_OTHERS_PROFILE### -->
+    <b>Ajouté par </b><br/>
+    <img src="dim.php?type=person_profile_pic&person=###ID_PERS###&timestamp=###TIMESTAMP###" alt=""  style="height:50px;float:left;margin-right: 10px" align="top"/>
+    <b>###TX_LOGIN###</b><br/>
+    (###TX_PRENOM### ###TX_NOM###)
+    <div style="clear:both"></div>
+    <!-- ###IF_CAN_SEE_OTHERS_PROFILE### -->
+    <div class="buttonwrapper">
+        <!-- ###IF_CAN_EDIT### -->
+        <button class="button" onclick="edit_event(###ID_EVENT###, '###VISIBILITE###')">
+            <img src="media/icons/date_edit.png" alt="" />
+            Modifier
+         </button>
+        <!-- ###IF_CAN_EDIT### -->
+        <!-- ###IF_CAN_DELETE### -->
+        <button class="button" onclick="delete_event(###ID_EVENT###, '###VISIBILITE###')">
+            <img src="media/icons/cross.png" alt="" />
+            Supprimer
+         </button>
+        <!-- ###IF_CAN_DELETE### -->
+    </div>
+</div>
+

@@ -1,0 +1,68 @@
+<h1>###NOM_CATEGORIE###</h1>
+
+
+ <div class="formwrapperForum">  
+<!-- ###IF_CAN_CREATE_SUBJECT### -->       
+      <a href="request.php?action=ForumTopicCreate&idcategorie=###ID_CATEGORIE###">
+        <button class="button" >
+            <img src="media/icons/topic_add.png" alt="nouveau sujet" />
+            Créer un nouveau sujet
+        </button>
+     </a>
+<!-- ###IF_CAN_CREATE_SUBJECT### -->
+      
+     <a href="request.php?action=Forum">
+         <button class="button" >
+            <img src="media/icons/arrow_left.png" alt="retour" />
+            Retour
+        </button>
+     </a> 
+ </div>
+
+        
+
+
+<table id='forum' class="sortIt">
+    <thead>
+        <tr>            
+            <th width="450" data-placeholder="Sujet...">Sujet</th>
+            <th data-placeholder="Créée par...">Créé par</th>
+            <th width="150" data-placeholder="Dernière réponse...">Dernière réponse</th>    
+            <th class="filter-false">#</th>    
+            <th class="filter-false"></th>
+        </tr>
+
+    </thead>
+    <tbody>
+         <!-- ###SUB_ITEM### -->
+        
+        <tr class="topic###ID_TOPIC###">
+             <td>                
+                 <a href="request.php?action=ForumTopic&idcategorie=###ID_CATEGORIE###&idtopic=###ID_TOPIC###">
+                     <b><u>###NOM_TOPIC###</u></b>
+                 </a>
+             </td>
+             <td><img src="dim.php?type=person_profile_pic&person=###ID_PERS###&timestamp=###TIMESTAMP###" id="profile_head_picture"
+                     alt="" style="height: 40px;border:1px solid #001F3E;margin-left: 10px" align="top" class="expandable"/>
+                 ###TX_LOGIN### 
+             </td>
+            <td>###DATE_LAST_POST###</td> 
+            <td class="count_col"><div>###POST_CNT###</div></td>   
+            <td>
+                <div class="commandwrapper">
+
+                 <!-- SUBED###ID_TOPIC### -->   
+                     <a href="request.php?action=ForumTopicEdit&idcategorie=###ID_CATEGORIE###&idtopic=###ID_TOPIC###">        
+                        <img src="media/icons/comment_edit.png" id="###ID_TOPIC###"/>                               
+                    </a>    
+                <!-- SUBED###ID_TOPIC### -->
+                <!-- SUBDEL###ID_TOPIC### -->                
+                        <img src="media/icons/cross.png" class="tooltip deleteS" id="###ID_TOPIC###"/> 
+                 <!-- SUBDEL###ID_TOPIC### -->   
+                </div>
+            </td>
+        </tr>
+          <!-- ###SUB_ITEM### -->
+    </tbody>
+</table>
+    

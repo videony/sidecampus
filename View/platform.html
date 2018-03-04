@@ -1,0 +1,42 @@
+<div class="platformwrapper" style="height:###HEIGHT###">   
+    <!-- ###SUB_PLATFORM### -->
+    <div class="platform" id='###ID_PLATEFORME###'>
+        <!-- ###IF_NOTIFICATIONS### -->
+            <div class='platform_notifications'>
+                ###COMPTEURNOTIF###
+                <span class="icon icon-bell"></span>
+            </div>
+        <!-- ###IF_NOTIFICATIONS### -->
+        <h3>###TX_NOM###</h3>
+        <h4>###ECOLE###</h4>
+        <!-- ###IF_PLATFORM_DETAILS### -->
+        <table class="platform_details">
+            <tr>
+                <td><b>Année:</b></td> <td>###ANNEE###</td>
+                <td><b>Code postal:</b></td> <td> ###CP###</td>
+            </tr>
+            <tr>
+                <td><b>Section:</b></td><td> ###SECTION###</td>
+                <td><b>Ville:</b></td> <td> ###VILLE###</td>
+            </tr>
+        </table>
+        <p style="white-space: pre-line;">
+            ###DESCRIPTIF###
+        </p>
+        <!-- ###IF_PLATFORM_DETAILS### -->
+        <!-- ###IF_COMMANDS### -->
+        <div class="buttonwrapper">
+            <button class="button" ###DISABLED### onclick="quitPlatform(###ID_PLATEFORME###)" title="###TITLE###">
+                Me désaffilier
+            </button>
+            <button class="button" ###DISABLED_SET_DEFAULT### onclick="defineDefault(###ID_PLATEFORME###)" title="###TITLE_SET_DEFAULT###">
+                Définir par défaut
+            </button>
+            <button class="button" ###DISABLED_USE### onclick="usePlatform(###ID_PLATEFORME###)" title="###TITLE_USE###">
+                Utiliser
+            </button>
+        </div>
+        <!-- ###IF_COMMANDS### -->
+    </div>
+    <!-- ###SUB_PLATFORM### -->
+</div>

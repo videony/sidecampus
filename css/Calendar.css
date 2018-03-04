@@ -1,0 +1,113 @@
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{
+    font-size: 14px !important;
+    font-family: Arial !important;
+}
+.ui-widget
+{
+    font-size: 14px !important;
+    font-family: Arial !important;
+}
+#tabs
+{
+    background-color: #F0F8FF !important;
+    border: 1px solid #001F3E !important;
+}
+.ui-widget-header
+{
+    background:#6582A0 !important;
+    border-bottom: 1px solid #001F3E;
+}
+ui-state-default ui-corner-top ui-tabs-active ui-state-active
+{
+    background-color: #F0F8FF !important;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
+{
+    color: #6582A0 !important;
+    
+}
+.ui-widget-content
+{
+    background-color: #F0F8FF !important;
+    border: 1px solid #001F3E !important;
+}
+.ui-tabs-panel
+{
+    border: none !important;
+}
+
+
+td.fc-day, td.fc-widget-content, td.fc-mon, fc-past {
+	border: 1px solid #001F3E;
+	color: #001F3E;
+}
+.fc-day-header {
+	border: 2px solid #001F3E;
+	background-color: #6582A0;
+	color: white;
+}
+.fc-event {
+	background-color: #001F3E;
+	color:white;
+	border: 1px dotted black;
+}
+.fc-today {
+	font-size: 30px;
+}
+
+.public {
+	background-color: #001F3E;
+	color:white;
+	border: 1px dotted black;
+}
+.private {
+	background-color: rgb(249, 220, 119);
+	color:black !important;
+	border: 1px dotted black;
+}
+
+.etitle {
+    display: inline;
+    font-size: 22px;
+}
+.wrapper {
+    border: 1px solid black;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+#preparing-file-modal
+{
+    display: none;
+}
+#calendar table
+{
+    background: none !important;
+}
+#visibilite 
+{
+    width: 80% !important;
+}
+
+@media only screen and (max-device-width: 900px)
+{
+    #ics_url{
+        width: 90% !important;
+        overflow: auto;
+        margin: 5px auto;
+        padding: 10px;
+    }
+    select[name="hr_debut"], select[name="hr_fin"],
+    select[name="mn_debut"], select[name="mn_fin"]
+    {
+        width: 15%;
+    }
+    .button {
+        width: 80%;
+        display: block;
+        margin: 5px auto;
+        float: none !important;
+    }
+    
+}

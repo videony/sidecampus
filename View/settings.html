@@ -1,0 +1,39 @@
+<form method="post" id="notifs" name="notifs">
+<div class="formwrapper permswrapper"> 
+    <!-- ###IF_FILE_SETTINGS### -->
+        <fieldset class="formbox" style="width:50%;margin:10px;">
+            <legend>FICHIERS <img src="media/icons/folder.png" alt="" /> </legend>
+            ###FILE_SETTINGS###
+        </fieldset>
+    <!-- ###IF_FILE_SETTINGS### -->
+    <!-- ###IF_EVENT_SETTINGS### -->
+    <fieldset class="formbox" style="width:50%;margin:10px;">
+        <legend>CALENDRIER <img src="media/icons/date.png" alt="" /> </legend>
+        ###EVENT_SETTINGS###
+    </fieldset>
+    <!-- ###IF_EVENT_SETTINGS### -->
+</div>
+<div class="formwrapper permswrapper"> 
+    <!-- ###IF_FORUM_SETTINGS### -->
+    <fieldset class="formbox" style="width:50%;margin:10px;">
+        <legend>FORUM <img src="media/icons/comment.png" alt="" /> </legend>
+        ###FORUM_SETTINGS###
+    </fieldset>
+    <!-- ###IF_FORUM_SETTINGS### -->
+    <!-- ###IF_MANAGE_SETTINGS### -->
+    <fieldset class="formbox" style="width:50%;margin:10px;">
+        <legend>GESTION DE LA PLATEFORME <img src="media/icons/monitor.png" alt="" /> </legend>
+        ###MANAGE_SETTINGS###
+    </fieldset>
+    <!-- ###IF_MANAGE_SETTINGS### -->
+</div>
+        
+        <div class="buttonwrapper">
+           
+            <input class="button" type="submit" name="notifs" value="Sauvegarder les modifications"/>
+
+            <button class="button resetDefault" id="###ID_MEMBRE###">                
+                Rétablir aux valeurs par défaut
+            </button>
+        </div>        
+</form>  

@@ -1,0 +1,33 @@
+.error{
+    background-color:tomato;
+    border-radius:10px;
+    border: 2px dotted darkred;
+    color:darkred;
+    font-family: Calibri;
+    padding:20px;
+    text-align:justify;
+    width:70%;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:10%;
+    box-shadow: 5px 5px 10px gray;
+}
+.error table
+{
+    border: 1px solid darkred;
+    border-collapse: collapse;
+    min-width:100%;
+}
+.error table tr td
+{
+    border: 1px solid darkred;
+    padding:10px;
+}
+.info
+{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+

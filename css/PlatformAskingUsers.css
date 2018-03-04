@@ -1,0 +1,20 @@
+div.ui-tooltip {
+    width: auto;
+    max-width: none;
+}
+td img {
+    cursor: pointer;
+}
+.platformwrapper
+{
+    height: auto !important;
+    overflow: hidden;
+}
+tr.banned td
+{
+    background-color: lightgray;
+    color: black;
+    opacity: 0.5;
+}
+    
+

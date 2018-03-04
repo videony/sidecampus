@@ -1,0 +1,343 @@
+.wrapper
+{
+    border: 1px solid #001F3E;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;background: #405D79;
+}
+.commandwrapper
+{
+    display: inline-block;
+    position: relative;
+    color: black;
+    margin: 0px 10px 0px 10px;
+    height: 28px;
+    width: auto;
+    padding: 0px 5px 1px 5px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 3px;background: linear-gradient(#FFFF80, #FF8000);
+    border: 1px solid #617F9D;
+    opacity: 0.8;
+}
+.fileline input{
+    
+    margin-top: 6px;
+    float: left;
+}
+.commandwrapper img
+{
+    cursor: pointer;
+    margin-top: 5px;
+}
+div.top_commands .commandwrapper, div.display .commandwrapper, div#selection .commandwrapper
+{
+    display: inline-block;
+    position: relative;
+    color: #BFE1FF;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    width: auto;
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+    margin: 0px;
+    border: none;
+    border-radius: 0px;
+}
+div.top_commands .commandwrapper:hover, 
+div.display .commandwrapper:hover, 
+div#selection .commandwrapper:hover
+{
+    background: #BFE1FF;
+    color: black;
+}
+#add_file_form
+{
+    border-bottom: 1px solid #001F3E;
+    padding: 5px;
+}
+#selection
+{
+    border-bottom: 1px solid #001F3E;
+    padding: 0px;
+}
+#selection .commandwrapper
+{
+    margin: 0px 2px 0px 2px;
+    cursor:pointer;
+}
+#chemin
+{
+    margin-left: 10px;
+    width: 65%;
+    height: 21px;
+    border-radius: 2px;
+    background-color: #71889E;
+    color: #BFE1FF;
+}
+#chemin_form
+{
+    display: inline;
+}
+.add_file
+{
+    cursor: pointer;
+    font-size:14px;
+}
+.add_folder
+{
+    cursor: pointer;
+    font-size:14px;
+}
+.top_commands
+{
+    border-bottom: 1px solid #001F3E;
+    padding: 0px;
+    font-size: 18px;
+    line-height: 38px;
+    height: 42px;
+}
+#fileswrapper
+{
+    padding: 10px;
+    border: 0px;
+    min-height: 300px;
+    background: #C9D3DE;
+}
+.selected
+{
+    background-color: #BFE1FF;
+    border: 1px solid #617F9D;
+    border-radius: 5px;
+    margin: 9px !important;
+}
+.targeted
+{
+    background-color: rgba(255,160,66,0.2);
+    border: 1px solid #617F9D;
+    border-radius: 5px;
+    margin: 9px !important;
+}
+.fileline
+{
+    margin: 10px;
+    padding: 5px;
+    width: 430px;
+    float: left;
+}
+.fileline .big_icon
+{
+    height: 60px;
+    float:left;
+    margin-right: 10px;
+}
+.fileline .commandwrapper
+{
+    width: auto;
+    float: right;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+.folderline
+{
+    cursor: pointer;
+}
+.folderline:hover
+{
+    background-color: #BFE1FF;
+    border: 1px solid #617F9D;
+    border-radius: 5px;
+    margin: 9px !important;
+}
+.perline3
+{
+    margin: 10px;
+    padding: 5px;
+    width: 276px;
+    float: left;
+    font-size:10px;
+}
+.perline3 .big_icon
+{
+    height: 40px;
+    float:left;
+    margin-right: 10px;
+}
+.perline3 .commandwrapper
+{
+    width: auto;
+    height: 20px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+.perline3 .commandwrapper img
+{
+    height: 12px;
+}
+.perlinefolder3
+{
+    cursor: pointer;
+}
+.perlinefolder3:hover
+{
+    background-color: #BFE1FF;
+    border: 1px solid #617F9D;
+    border-radius: 5px;
+    margin: 9px !important;
+}
+#filelist span
+{
+    display: block;
+    color: black;
+    margin: 5px 0px 5px 50px;
+    height: 29px;
+    width: 90%;
+    padding: 1px 5px 1px 5px;
+    line-height: 30px;
+    text-align: left;
+    border-radius: 3px;
+    background: #9AADC0;
+    border: 1px solid #617F9D;
+}
+.too_big
+{
+    opacity: 0.3;
+}
+.progress_percent
+{
+    float:right;
+    margin-right: 10px; 
+}
+#container
+{
+    padding: 0px 20px 0px 20px;
+}
+.file_descr
+{
+    width: 80%;
+}
+#add_folder_form, #edit_comment_form, #rename_form
+{
+    display: none;
+    font-family: Arial;
+    width: 400px;
+    text-align: left;
+    font-family: Arial;
+    font-size: 12px;
+}
+#add_folder_form input, #edit_comment_form input, #rename_form input
+{
+    width: 90%;
+}
+#add_folder_form button, #edit_comment_form button, #rename_formche button
+{
+    margin-right: 5px;
+}
+#comments_form
+{
+    width: 600px !important;
+}
+#comments_form textarea
+{
+    width: 95%;
+    height: 80px;
+}
+#preparing-file-modal
+{
+    display: none;
+    text-align: center;
+    padding: 10px;
+}
+#error-modal
+{
+    display: none;
+    text-align: center;
+    padding: 10px;
+    color: red;
+}
+#too-big-modal
+{
+    display: none;
+    text-align: center;
+    padding: 10px;
+    color: red;
+}
+.display
+{
+    height: 42px;
+    margin: 0px;
+    border-bottom: 1px solid #001F3E;
+}
+.display .commandwrapper
+{
+    margin: 0px;
+    cursor: pointer;
+}
+#extract_archives
+{
+    margin-left: 20px;
+}
+#upload_in_progress
+{
+    margin-left: 20px;
+    font-weight: bold;
+    color: darkred;
+    text-align: center;
+    width: 900px;
+}
+
+.filecommand
+{
+    color: #CDD7E0;
+    cursor: pointer;
+    margin: 0px !important;
+    padding: 0px !important;
+    line-height: 42px;
+    font-size: 25px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    border-radius: 0px !important;
+}
+.filecommand:hover
+{
+    color: #415567 !important;
+    background: #CDD7E0;
+}
+.filecommand:hover a, .filecommand a
+{
+    text-decoration: none;
+}
+.viewable 
+{
+    cursor: pointer;
+}
+@media only screen and (max-device-width: 900px)
+{
+    .check_uncheck_container
+    {
+        display: none !important;
+    }
+    #check_uncheck_all
+    {
+        display: none;
+    }
+    .download, .paste, .cut, .copy, .delete
+    {
+        width: 15%;
+        float: left !important;
+    }
+    .fileline, .folderline
+    {
+        width: 90% !important;
+    }
+    .make2perline, .make3perline
+    {
+        display: none;
+    }
+    #chemin
+    {
+        display: none;
+    }
+}

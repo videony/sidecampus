@@ -1,0 +1,86 @@
+<div class='buttonwrapper'>
+    <!-- ###IF_MINE### -->
+    <a href='request.php?action=Annonces'>
+        <div class='button top_button'>
+            <span class='icon icon-list command'></span>
+            Voir toutes les annonces
+        </div>
+    </a>
+    <!-- ###IF_MINE### -->
+    <!-- ###IF_ALL### -->
+    <a href='request.php?action=Annonces&mine=1'>
+        <div class='button top_button'>
+            <span class='icon icon-cog command'></span>
+            Gérer mes annonces
+        </div>
+    </a>
+    <!-- ###IF_ALL### -->
+    <div class='button top_button search_button'>
+        <span class='icon icon-search command' id='search_click'></span>
+        <input type='text' id='search' placeholder="Rechercher..." />
+    </div>
+    <a href='request.php?action=AnnonceCreate'>
+        <div class='button top_button create'>
+            <span class='icon icon-bullhorn command'></span>
+            Créer une annonce
+        </div>
+    </a>
+</div>
+<!-- ###SUB_ANNONCE### -->
+<div id="###ID_ANNONCE###" class="annonce">
+    <div class='price'>€ ###INT_PRICE###</div>
+    <div class='titre'>###TX_TITRE###</div><br/>
+    <i>###POSTED###</i>
+    <div class='user'>
+        <span class='icon icon-64 icon-user'></span>
+    </div>
+    <p>
+    <div class='description'>###TX_DESCRIPTION###</div>
+    </p>
+    <!-- ###IF_NOT_ANNONCEUR### -->
+    <div class='contact'>
+        <span class='icon icon-envelope respond'></span>
+        <span class='icon icon-link get_link' title='###LINK###'></span>
+        <div class='contact_form'>
+            <fieldset>
+                <!-- ###IF_VISITOR### -->
+                <label>Votre nom * <span class="name_error"></span></label>
+                <input type='text' name='tx_name' class='tx_name'/>
+                <label>Votre e-mail * <span class="mail_error"></span></label>
+                <input type='email' name='tx_email' class='tx_email'/>
+                <!-- ###IF_VISITOR### -->
+                <label>Message à adresse à l'annonceur (Max 1000 caractères) <span class="mess_error"></span></label>
+                <textarea name='tx_message' class='tx_message'></textarea>
+            </fieldset>
+            <div class='buttonwrapper'>
+                <button class="button send_message">
+                    Envoyer
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- ###IF_NOT_ANNONCEUR### -->
+    <!-- ###IF_ANNONCEUR### -->
+    <div class='contact'>
+        <span class='view_messages'>
+            <span class='icon icon-envelope'></span>
+            <u>(###NB_MESSAGES###)</u>
+        </span>
+        <a href='request.php?action=AnnonceEdit&id_annonce=###ID_ANNONCE###'>
+            <span class='icon icon-pencil edit_annonce'></span>
+        </a>
+        <span class='icon icon-remove remove_annonce'></span>
+        <span class='icon icon-link get_link' title='###LINK###'></span>
+        <div class='reponses'>
+            <!-- ###SUB_REPONSES### -->
+            <div class='reponse'>
+                <b>###TX_NOM### (<a href='mailto:###TX_EMAIL###'>###TX_EMAIL###</a>)</b><br/>
+                <i>###DT_ANSWERED###</i>
+                <p>###TX_REPONSE###</p>
+            </div>
+            <!-- ###SUB_REPONSES### -->
+        </div>
+    </div>
+    <!-- ###IF_ANNONCEUR### -->
+</div>
+<!-- ###SUB_ANNONCE### -->

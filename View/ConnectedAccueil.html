@@ -1,0 +1,48 @@
+<div class="activity" id="accueil_menu" style="height:255px;text-align: center">
+    <a href="request.php?action=Files">
+        <div class="tile red"><span class="icon icon-32 icon-folder-open"></span><br/><b>FICHIERS</b></div>
+    </a>
+    <a href="request.php?action=Forum">
+        <div class="tile green"><span class="icon icon-32 icon-comment"></span><br/><b>FORUM</b></div>
+    </a>
+   
+    <a href="request.php?action=PlatformList">
+        <div class="long_tile"><span class="icon icon-32 icon-list"></span><br/><b>TOUTES LES PLATEFORMES</b></div>
+    </a>
+</div>
+
+<!-- ###SUB_PLATFORM_MESSAGES### -->
+    <div class="utils" style="height:255px;text-align: justify;overflow:auto">
+        <div class="title"><span class="icon icon-16 icon-envelope"></span>
+            Messages à la plateforme
+            <!-- ###IF_CAN_WRITE_PLATFORM_MESSAGE### -->
+            <span class="icon icon-16 icon-pencil tooltip write_platform_message" title="Ecrire un message à la plateforme"></span>
+            
+            <div id="pl_message_form">
+                <label for="new_platform_message">Message à adresser à la plateforme</label><br/><br/>
+                <textarea id="new_platform_message"></textarea>
+                500 caractères maximum
+                <div class="buttonwrapper">
+                    <button class="button" id="write_message">
+                        <img src="media/icons/pencil_go.png" /> Publier
+                    </button>
+                </div>
+            </div>
+            <!-- ###IF_CAN_WRITE_PLATFORM_MESSAGE### -->
+        </div>
+        <!-- ###SUB_ITEM### -->
+        <div class="platform_message" id="###ID_MESSAGE###">
+            
+            <div class='platform_message_commands'>
+                <span class='icon icon-16 icon-fullscreen show_full_message'></span>
+                <!-- ###IF_CAN_DELETE_PLATFORM_MESSAGES### -->
+                <span class='icon icon-16 icon-remove delete_message red'></span>
+                <!-- ###IF_CAN_DELETE_PLATFORM_MESSAGES### -->
+            </div>
+            <p class="login">###TX_LOGIN###</p>
+            <p class="message">###TX_MESSAGE###</p>
+        </div>
+        <!-- ###SUB_ITEM### -->
+    </div>
+<!-- ###SUB_PLATFORM_MESSAGES### -->
+<div style="clear:both"></div>

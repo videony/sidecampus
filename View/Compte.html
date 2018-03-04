@@ -1,0 +1,73 @@
+<div id="tabs">  
+<ul>
+    <li><a href="#infos">Mes informations</a></li>
+    <!-- ###IF_SETTINGS_HEADER### -->
+    <li><a href="#params">Paramètres sur la plateforme</a></li>
+    <!-- ###IF_SETTINGS_HEADER### -->
+</ul>
+    <div id="infos">
+        <!-- ###SUB_INFOS### -->
+
+        <!-- ###SUB_INFOS### -->
+        <form method="POST">
+          <div class="formwrapper">
+            <fieldset class="formbox" style="width:50%">
+                 <legend><h3>Informations générales</h3></legend>
+                 <!-- ###SUB_GENERAL### -->
+
+                 <!-- ###SUB_GENERAL### -->
+            </fieldset>
+            <fieldset class="formbox" style="width:50%">
+                 <legend><h3>Informations de contact</h3></legend>
+                 <!-- ###SUB_CONTACT### -->
+
+                 <!-- ###SUB_CONTACT### -->
+            </fieldset>
+          </div><br/>
+          
+          <div class="formwrapper">
+              
+              <fieldset class="formbox" style="width:380px">
+                  <legend><h3>Ma photo de profil</h3></legend>
+                  <div id="filelist">
+
+                  </div>
+                  <br />
+
+                  <div id="container">
+                      <img src="dim.php?type=person_profile_pic&person=###ID_PERSONNE###&timestamp=###TIMESTAMP###"
+                           id="form_profile_pic" style="width:200px; float:left" class="expandable"/>
+                      <span class="button right" id="browse" style="margin-top: 20px">
+                          <img src="media/icons/folder_magnify.png" alt="" />
+                          Parcourir
+                      </span>
+                      <span class="button right" id="start-upload" style="margin-top: 20px">
+                          <img src="media/icons/picture_save.png" alt="" />
+                          Mettre à jour
+                      </span>
+                  </div>
+
+                  <br />
+                  <pre id="console">
+
+                  </pre>
+              </fieldset>
+          </div>
+            <div class="buttonwrapper">
+<!--                <button class="button">
+                    <img src="media/icons/user_go.png" alt="" />
+                    Sauvegarder mes changements
+                </button>-->
+                <input type="submit" class='button' name="compte" value="Sauvegarder mes changements"/>
+            </div>
+        </form>
+        <div class="clear"></div>
+    </div>
+    <!-- ###IF_SETTINGS### -->
+        <div id="params">
+            ###SETTINGS###
+        </div>
+    <!-- ###IF_SETTINGS### -->
+
+    
+</div>

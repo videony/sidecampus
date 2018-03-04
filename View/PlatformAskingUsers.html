@@ -1,0 +1,37 @@
+<h1>Utilisateurs en demande d'admission</h1>
+###INFORMATION###
+<br/>
+<table id='demandes' class="sortIt">
+    <thead>
+        <tr>
+            <th data-placeholder="ID...">ID</th>
+            <th data-placeholder="Nom...">Nom</th>
+            <th class="filter-false"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ###SUB_DEMANDES### -->
+            <!-- ###SUB_ITEM### -->
+            <tr id="###ID_DEMANDE###" class="###BANNED###">
+                <td>###ID_PERSONNE###</td>
+                <td>###TX_PRENOM### ###TX_NOM###</td>
+                <td>
+                    <!-- ###IF_CAN_ACCEPT_USER### -->
+                    <span class='icon icon-32 icon-check tooltip asking_accept' title="Autoriser à rejoindre"></span>
+                    <!-- ###IF_CAN_ACCEPT_USER### -->
+                    <!-- ###IF_CAN_SEE_OTHERS_PROFILE### -->
+                    <span class='icon icon-16 icon-eye-open tooltip asking_see' title="Voir profil"></span>
+                    <!-- ###IF_CAN_SEE_OTHERS_PROFILE### -->
+                    <span class='icon icon-16 icon-remove-circle tooltip asking_reject' title="Refuser"></span>
+                    <!-- ###IF_CAN_BAN_USER### -->
+                    <span class='icon icon-16  icon-hand-right tooltip asking_ban' title="Bannir"></span>
+                    <!-- ###IF_CAN_BAN_USER### -->
+                    <!-- ###IF_CAN_UNBAN_USER### -->
+                    <span class='icon icon-16 icon-thumbs-up tooltip asking_unban' title="Débannir"></span>
+                    <!-- ###IF_CAN_UNBAN_USER### -->
+                </td>
+            </tr>
+            <!-- ###SUB_ITEM### -->
+        <!-- ###SUB_DEMANDES### -->
+    </tbody>
+</table>

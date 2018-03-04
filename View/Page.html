@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>###HTML_PAGE###</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<noscript><meta http-equiv="refresh" content="0; URL=noJS.html"></noscript>
+        <link rel="shortcut icon" type="image/png" href="media/icons/logo.png">
+          <!-- ###SUB_CSS### -->
+            <!-- ###SUB_ITEM### -->
+            <link rel="stylesheet" href="###VALUE###" />
+            <!-- ###SUB_ITEM### -->
+        <!-- ###SUB_CSS### -->
+        <!-- ###SUB_JS### -->
+            <!-- ###SUB_ITEM### -->
+            <script type="text/javascript" src="###VALUE###"></script>
+            <!-- ###SUB_ITEM### -->
+        <!-- ###SUB_JS### -->
+    </head>
+    <body>
+        <div class="site-header-fixture top" >
+            
+            <div class="site-header">
+                <div class="cell page_title centered-content">
+                    <a href="###HOME_PAGE###"> 
+                    <img src='###LOGO_LOCATION###' class="top_title"/> 
+                    </a>
+                </div>
+                <!-- ###IF_CONNECTED### -->
+                <div class="person_icons">
+                    <div class="connected_menu">
+                        <div class="centerhelper">
+                        <!-- ###IF_PROFILE_PIC### -->
+                        <div class="cell right menu_element profile_picture_wrapper">
+                            <span id="###ID_PERSONNE###">
+                                <img src="dim.php?type=person_profile_pic&person=###ID_PERSONNE###&timestamp=###TIMESTAMP###" 
+                                     id="profile_head_picture"
+                                        alt=""
+                                        title="Profil" class="see_profile_top"/>
+                            </span>
+                            <span class="icon icon-64 icon-user see_profile_top" id="alt_profile_head_picture"></span>
+                        </div>
+                        <!-- ###IF_PROFILE_PIC### -->
+                        <!-- ###IF_PLATFORM### -->
+                        <div class="cell right menu_element">
+                            <span class="nb_notifs total_notifs_count dontshowIt" >###NB_TOTAL_NOTIFS###</span>
+                            <span class="icon icon-64 icon-bell" id="open_notifications" style="cursor:pointer"></span>
+                        </div>
+                        <!-- ###IF_PLATFORM### -->
+
+                        <div class="cell right menu_element">  
+                            <a href="request.php?action=Todo">
+                                <span class="icon icon-64 icon-pushpin tooltip" title="Ce que j'ai à faire..."></span>
+                            </a>
+                        </div>
+                        <div class="cell right menu_element">  
+                            <a href="request.php?action=Calendar">
+                                <span class="icon icon-64 icon-calendar tooltip" title="Mon Calendrier"></span>
+                            </a>
+                        </div>
+                        <div class="cell right menu_element">  
+                            <a href="request.php?action=PersonalFiles">
+                                <span class="icon icon-64 icon icon-folder-open tooltip" title="Mes fichiers"></span>
+                            </a>
+                        </div>
+                        <div class="cell right menu_element">  
+                            <a href="request.php?action=Bloque">
+                                <span class="icon icon-64 icon icon-beaker tooltip" title="Gérer ma bloque"></span>
+                            </a>
+                        </div>
+                        <div class="cell right menu_element greenish">  
+                            <!-- ###IF_ANNONCES_COUNT### -->
+                                <span class="nb_annonces annonces_count" >###NB_ANNONCES###</span>
+                            <!-- ###IF_ANNONCES_COUNT### -->
+                            <a href="request.php?action=Annonces">
+                                <span class="icon icon-64 icon icon-bullhorn tooltip" title="Petites annonces"></span>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- ###IF_CONNECTED### -->
+                <!-- ###IF_NOT_CONNECTED### -->
+                <div class='person_icons visitor'>
+                     <div class="cell right login_menu"> 
+                         <div>
+                             <a href="request.php?action=Connect"style='text-decoration: none'>
+                                 <div class='button connect-button' style='margin-top: 8px'>
+                                    <span class="icon icon-chevron-sign-right small-icon"></span>
+                                    Connexion
+                                </div>
+                             </a>
+                            
+                            
+                            <a href="request.php?action=Register" style='text-decoration: none'>
+                                <div class='button connect-button' style='margin-top: 8px'>
+                                    <span class="icon icon-check-sign small-icon"></span>
+                                    Inscription
+                                </div>
+                            </a>
+                         </div>
+                    </div>
+                    <div class="cell right others_menu">  
+                        <div>
+                            <a href="request.php?action=PlatformList">
+                                <span class="icon icon-64 icon-list tooltip" title="Plateformes"></span>
+                            </a>
+                            <div class="cell right menu_element greenish" style='margin-top: -5px !important'>  
+                            <!-- ###IF_ANNONCES_COUNT### -->
+                                <span class="nb_annonces annonces_count" >###NB_ANNONCES###</span>
+                            <!-- ###IF_ANNONCES_COUNT### -->
+                            <a href="request.php?action=Annonces">
+                                <span class="icon icon-64 icon icon-bullhorn tooltip" title="Petites annonces"></span>
+                            </a>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- ###IF_NOT_CONNECTED### -->
+            </div>
+        </div>
+        <div class="platform_view dontshowIt" id="notification_div">
+            <div class="topactivitywrapper">   
+                <div class="inner_platform_wrapper">
+                    <div class="topactivitytitle">
+                        <div class='left'><span class='icon icon-32 icon-chevron-left previous_platform'></span></div>
+                        <div class='platform_title' id='###PLATFORM_ID###'>
+                            <h2>###PLATFORM_NAME###</h2>
+                        </div>
+                        <div class='right'><span class='icon icon-32 icon-chevron-right next_platform'></span></div>
+                    </div>
+                    <span class="nb_notifs_in left">
+                        <span class="notifs_count" id="platform_notif_count">###NB_NOTIFS###</span>
+                    </span>
+                    <br/>
+                    <div style="clear:both"></div>
+                    <!-- ###SUB_NOTIFICATIONS### -->
+                    <div class="notifs" style="width: auto;margin: 0px;margin-top: 10px">
+                        <!-- ###SUB_NOTIFICATIONS_ONLY### -->
+                        <!-- ###SUB_ITEM### -->
+                        <a href="###TX_LINK###" class="notification_link">
+                        <div class="notification ###NOTIF_SECTION###  ###IS_READ###">
+                            <div class="typeindicator ###NOTIF_TYPE###"></div>
+                            <div class="notificationtextcontainer">
+                                <b>###TX_NOTIF_PRENOM### ###TX_NOTIF_NOM###</b><br/>
+                                <i>###NOTIF_DATE###</i><br/>
+                                <p style="clear:both"></p>
+                                <p>###NOTIF_TEXTE###</p>
+                                <p style="clear:both"></p>
+                            </div>
+                        </div>
+                        </a>
+                        <!-- ###SUB_ITEM### -->
+                        <!-- ###SUB_NOTIFICATIONS_ONLY### -->
+                        <div class="load_more_notifications">Plus de notifications</div>
+                        <div class="notification_loader"><span class="icon spin icon-64 icon-cog"></span></div>
+                    </div>
+                    <!-- ###SUB_NOTIFICATIONS### -->
+                </div>
+            </div>
+        </div>
+         <div class="profile_view dontshowIt" id="profile_div">
+            <div class="topprofilewrapper">   
+                <div class="inner_profile_wrapper">
+                    <a href="request.php?action=Compte"><button class="button">Mon compte</button></a>
+                    <a href="request.php?action=Disconnect"><button class="button">Me déconnecter</button></a>
+                </div>
+            </div>
+        </div>
+        <div>
+                <!-- ###IF_PLATFORM_MENU### -->
+            <div class="site-header top_menu ###TRANSPARENT###">
+                <div id="platform_name_holder">
+                    <span class="icon icon-32 icon-caret-down"></span>
+                    ###PLATFORM_NAME###
+                </div>
+                <span class="icon icon-64 ###ICON_SIDE_MENU### right_tooltip" id='collapse_side_menu' title='Réduire'></span>
+                <div style='clear:both'></div>
+                <div id='side_menu_list' class="###INVISIBLE###">
+                
+                <!-- ###SUB_MENU### -->
+                    <!-- ###IF_CAN_SEE_FILES### -->
+                    <div>
+                        <div class="cell centered-content menu_element right_tooltip"
+                             title="Fichiers de la plateforme ###PLATFORM_NAME###">
+                            <a href="request.php?action=Files">
+                                <span class="icon icon-64 icon-folder-open"></span>
+                                <span class="mobile_menu_text">Fichiers</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ###IF_CAN_SEE_FILES### -->
+                    <div>
+                        <div class="cell centered-content menu_element right_tooltip"  title="Forum de la plateforme ###PLATFORM_NAME###">
+                            <a href="request.php?action=Forum">
+                                <span class="icon icon-64 icon-comment-alt"></span>
+                                <span class="mobile_menu_text">Forum</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ###IF_CAN_SEE_FILES### -->
+                    <!-- ###IF_CAN_SEE_MESSAGES### -->
+                    <div>
+                        <div class="cell centered-content menu_element right_tooltip"  title="Utilisateurs de la plateforme ###PLATFORM_NAME###">
+                            <a href="request.php?action=UserMan">
+                                <span class="icon icon-64 icon-group"></span>
+                                <span class="mobile_menu_text">Utilisateurs</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ###IF_CAN_SEE_MESSAGES### -->
+                    <!-- ###IF_CAN_EDIT_PLATFORM### -->
+                    <div>
+                        <div class="cell centered-content menu_element right_tooltip"  title="Gérer ###PLATFORM_NAME###">
+                            <a href="request.php?action=PlatformMan">
+                                <span class="icon icon-64 icon-gear"></span>
+                                <span class="mobile_menu_text">Gestion</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ###IF_CAN_EDIT_PLATFORM### -->
+                    <div>
+                        <div class="cell centered-content menu_element right_tooltip"  title="Changer de plateforme" id='PlatformConnected'>
+                                <span class="icon icon-64 icon-exchange"></span>
+                                <span class="mobile_menu_text">Changer de plateforme</span>
+                        </div>
+                    </div>
+                    
+                    <div class="all_platforms">
+                        <div class="cell centered-content menu_element right_tooltip"  title="Consulter toutes les plateformes">
+                            <a href="request.php?action=PlatformList">
+                                <span class="icon icon-64 icon-list" style="width:30px"></span>
+                                <span class="mobile_menu_text">Toutes les plateformes</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ###IF_PLATFORM_MENU### -->
+                <div style="clear: both"></div>
+            </div>
+                <div class='shadow'></div>
+        <div class="body">
+            <!-- ###IF_PLATFORM_TITLE### -->
+                <h1 style="text-align:center" id='platform_accueil_title'>###PLATFORM_NAME###</h1><br/>
+            <!-- ###IF_PLATFORM_TITLE### -->
+            <!-- ###IF_NEED_PLATFORM_LINK### -->
+            <a href="request.php?action=PlatformList" class="no-underline">
+                <button class='button first_use_button'>
+                    <span class="icon icon-64 icon-circle-arrow-right"></span>
+                    Rejoindre<!-- ###IF_CREATE_PLATFORM### --> ou créer<!-- ###IF_CREATE_PLATFORM### --> une plateforme
+                </button>
+            </a>
+            <div style="clear:both"></div>
+            <!-- ###IF_NEED_PLATFORM_LINK### -->
+            <!-- ###SUB_BODY### -->
+        
+            <!-- ###SUB_BODY### -->
+        </div> 
+        <div class="site-center ">
+            <div class="site-footer">
+                <div class="col width-fill">
+                    <div class="cell pipes">
+                        <ul class="nav">
+                            <li id="active"><a href="request.php?action=Contact">Contact</a></li>
+                            <li><a href="request.php?action=CGU">CGU</a></li>
+                            <li><a href="request.php?action=About">A propos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        <div id="connected_platforms">
+            
+        </div>
+        <!-- ###IF_SESSION_MESSAGE### -->
+            <div id="session_message">
+                ###SESSION_MESSAGE###
+            </div>
+        <!-- ###IF_SESSION_MESSAGE### -->
+        
+        <!-- ###IF_HAS_NOT_SEEN_WHICH_PLATFORM### -->
+        <p id='which_platform'>Connecté à ###PLATFORM_NAME###</p>
+        <!-- ###IF_HAS_NOT_SEEN_WHICH_PLATFORM### -->
+    </body>
+</html>

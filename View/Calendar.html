@@ -1,0 +1,113 @@
+<script>
+
+                $(document).ready(function() {
+                    
+                    
+
+                        var date = new Date();
+                        var d = date.getDate();
+                        var m = date.getMonth();
+                        var y = date.getFullYear();
+
+                        $('#calendar').fullCalendar({
+                                editable: false,
+                                weekMode: 'variable',
+                                timeFormat: 'H:mm',
+                                firstDay:1,
+                                events: [
+                                <!-- ###SUB_ITEM_CALENDAR_EVENT### -->
+                                    {
+                                        id: '###ID###',
+                                        title: '###TITRE###',
+                                        start: new Date(###S_YEAR###, ###S_MONTH###, ###S_DAY###, ###S_HOUR###, ###S_MIN###),
+                                        end: new Date(###E_YEAR###, ###E_MONTH###, ###E_DAY###, ###E_HOUR###, ###E_MIN###),
+                                        allDay: false,
+                                        className: '###CLASS_EVENT_NAME###'
+                                    },
+                                <!-- ###SUB_ITEM_CALENDAR_EVENT### -->	
+                                ],
+                                eventStartEditable: true,
+                                eventDrop: function(event, delta, revertFunc) {
+                                    infos = event.id.split("_");
+                                    var html = sendPostRequest({
+                                            handler: 'CalendarController',
+                                            action: 'change_dates',
+                                            id: infos[1],
+                                            type: infos[0],
+                                            sdate: event.start.format(),
+                                            edate: event.end.format()
+                                    });	
+                                    if(html == '0')
+                                    {
+                                        alert('Vous ne pouvez pas déplacer cet évènement car vous n\'en avez pas le droit.');
+                                        revertFunc();
+                                    }
+                                },
+                                eventMouseover: function(event){
+                                    $(this).attr('title', 'Cliquez pour plus d\'informations');
+                                    $(this).tooltip();
+                                },
+                                eventClick: function(event) {
+                                    infos = event.id.split("_");
+                                    var html = sendPostRequest({
+                                            handler: 'CalendarController',
+                                            action: 'see_full_event',
+                                            id: infos[1],
+                                            type: infos[0]
+                                    });	
+
+                                    $.fancybox({
+                                                transitionIn: 'elastic',
+                                                transitionOut: 'elastic',
+                                                content: html
+                                        });
+                                }
+                        });
+
+                        $('#tabs').tabs({
+                            'active':   ###ACTIVE_TAB###,
+                            show: { effect: "blind", duration: 200 } 
+                        });
+
+                });
+        </script>
+
+<div id="tabs">  
+<ul>
+    <li><a href="#calendar">Vue Calendrier</a></li>
+    <!-- ###IF_ADD_HEADER### -->
+    <li><a href="#add">Ajouter un évènement</a></li>
+    <!-- ###IF_ADD_HEADER### -->
+</ul>
+    
+   
+
+       
+    <div id="calendar">
+
+        
+            <br/>
+    </div>
+    
+    <!-- ###SUB_ADD_FORM### -->
+    <div id="add">
+        <!-- ###SUB_INFOS### -->
+        
+        <!-- ###SUB_INFOS### -->
+        <form method="POST" id="add_event_form">
+	<fieldset>
+            <legend><h2>Evènement du calendrier</h2></legend>
+		<!-- ###SUB_FORM### -->
+                
+                <!-- ###SUB_FORM### -->
+		
+               <div class="buttonwrapper">
+		<input type="submit" value="Enregistrer" class="button right" id="add_event_button" />
+               </div>
+	</fieldset>
+</form>
+
+    </div>
+    <!-- ###SUB_ADD_FORM### -->
+    
+</div>

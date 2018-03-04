@@ -1,0 +1,50 @@
+###ASKING###
+<h1>Utilisateurs de la plateforme</h1>
+###INFORMATION###
+<br/>
+<div class="filters">
+    <h4>Chercher un utilsateur: </h4><br/>
+    <input type="text" id="nom" placeholder="Nom..." />
+    <input type="text" id="statut" placeholder="Statut..." />
+</div>
+<div style="clear:both"></div>
+<div>
+        <!-- ###SUB_DEMANDES### -->
+            <!-- ###SUB_ITEM### -->
+            <div id="###ID_MEMBRE###" class="userman_profile ###CLASS### tooltip" title="###TX_PRENOM### ###TX_NOM###">
+                <img src="###PROFILE_PICTURE###" 
+                     alt="" 
+                     class="profile_picture"/>
+                <!--<td>###TX_LOGIN###</td>-->
+                <div class="profile_hover">
+                    <b class="nom">###TX_PRENOM### ###TX_NOM###</b> <span class="statut">(###TX_STATUT###)</span><br/>
+                        <!-- ###IF_CAN_SEE_OTHERS_PROFILE### -->
+                        <span class="icon icon-16 icon-eye-open tooltip see" title="Voir profil" ></span>
+                        <!-- ###IF_CAN_SEE_OTHERS_PROFILE### -->
+                        <!-- ###IF_CAN_EDIT_RIGHTS### -->
+                        <span class="icon icon-16 icon-key tooltip permissions" title="Permissions" ></span>
+                        <!-- ###IF_CAN_EDIT_RIGHTS### -->
+                        <!-- ###IF_CAN_BLOCK_USER### -->
+                        <span class="icon icon-16 icon-lock tooltip block" title="Bloquer" ></span>
+                        <!-- ###IF_CAN_BLOCK_USER### -->
+                        <!-- ###IF_CAN_UNBLOCK_USER### -->
+                        <span class="icon icon-16 icon-unlock tooltip unblock" title="Débloquer" ></span>
+                        <!-- ###IF_CAN_UNBLOCK_USER### -->
+                        <!-- ###IF_CAN_REJECT_USER### -->
+                        <span class="icon icon-16 icon-remove tooltip eject" title="Exclure de la plateforme" ></span>
+                        <!-- ###IF_CAN_REJECT_USER### -->
+                        <!-- ###IF_CAN_SET_MEMBER### -->
+                        <span class="icon icon-16 icon-arrow-down tooltip set_member" title="Nommer simple membre" ></span>
+                        <!-- ###IF_CAN_SET_MEMBER### -->
+                        <!-- ###IF_CAN_SET_MODERATOR### -->
+                        <span class="icon icon-16 icon-arrow-up tooltip set_moderator" title="Nommer modérateur" ></span>
+                        <!-- ###IF_CAN_SET_MODERATOR### -->
+                        <!-- ###IF_CAN_SET_ADMIN### -->
+                        <span class="icon icon-16 icon-suitcase tooltip set_admin" title="Nommer administrateur" ></span>
+                        <!-- ###IF_CAN_SET_ADMIN### -->
+                    
+                </div>
+            </div>
+            <!-- ###SUB_ITEM### -->
+        <!-- ###SUB_DEMANDES### -->
+</div>

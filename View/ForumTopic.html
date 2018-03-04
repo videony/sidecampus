@@ -1,0 +1,66 @@
+<h1>###NOM_TOPIC###</h1>
+
+
+ <div class="formwrapperForum">     
+<!--IF_CAN_CREATE_NEW_MESSAGE-->
+     <a href="request.php?action=ForumPostCreate&idcategorie=###ID_CATEGORIE###&idtopic=###TOPIC###">
+        <button class="button" >
+            <img src="media/icons/topic_add.png" alt="nouveau post" />
+            Répondre
+        </button>
+     </a>   
+<!--IF_CAN_CREATE_NEW_MESSAGE-->
+     
+     <a href="request.php?action=ForumCategories&idcategorie=###ID_CATEGORIE###">
+         <button class="button" >
+            <img src="media/icons/arrow_left.png" alt="retour" />
+            Retour
+        </button>
+     </a>     
+ </div>
+
+<div class="title_first_post">
+    <img src="dim.php?type=person_profile_pic&person=###CREATOR###&timestamp=###TIMESTAMP###" 
+        class="expandable" alt="profile creator picture" style="height: 50px; border:1px solid #001F3E;float:left; margin-right: 5px; margin-bottom: 10px" align="top"/>
+              ###CREATORLOGIN###<br/>
+              Créé le ###CREATION_DATE###<br/>
+</div>
+
+<div class="first_post">
+    
+    ###FIRST_POST###
+    
+</div>
+
+
+<!-- ###SUB_ITEM### -->
+    
+    <p>
+        <img src="dim.php?type=person_profile_pic&person=###ID_PERS###&timestamp=###TIMESTAMP###" 
+            class="expandable" alt="profile picture" style="height: 40px;border:1px solid #001F3E;float:left; margin-right: 5px;" align="top"/>
+              ###TX_LOGIN###<br/>
+              Posté le ###DATE### 
+              
+    
+              <!-- POED###ID_POST### --> 
+              
+              <a href="request.php?action=ForumPostEdit&idcategorie=###ID_CATEGORIE###&idtopic=###ID_TOPIC###&idpost=###ID_POST###">        
+                    <img src="media/icons/comment_edit.png" style="float: right;" id="###ID_POST###"/>                            
+              </a>    
+              
+              <!-- POED###ID_POST### -->     
+    
+              
+              <!-- PODEL###ID_POST### -->
+              <img src="media/icons/cross.png" style="float: right; margin-right: 2px;" class="tooltip deleteM" id="###ID_POST###"/><br/>              
+              <!-- PODEL###ID_POST### -->
+              
+    </p>  
+
+    <div class='post'>
+        ###POST###
+    </div>
+         
+<!-- ###SUB_ITEM### -->
+  
+    

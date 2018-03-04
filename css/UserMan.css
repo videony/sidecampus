@@ -1,0 +1,338 @@
+div.ui-tooltip {
+    width: auto;
+    max-width: none;
+}
+td img {
+    cursor: pointer;
+}
+.platformwrapper
+{
+    height: auto !important;
+    overflow: hidden;
+}
+div.blocked
+{
+    background-color: lightgray;
+    color: black;
+    opacity: 0.5;
+}
+div.admin img
+{
+    border: 3px solid darkred !important;
+    /*background: #FFBD11;
+    background: linear-gradient(#FFE6A4, #FFBD11);
+    background: -webkit-linear-gradient(#FFE6A4, #FFBD11);
+    font-weight: bold;
+    color: darkred;*/
+}
+div.moderator img
+{
+    border: 3px solid #FFBD11 !important;
+}
+.permswrapper
+{
+    min-width: 900px;
+}
+.formbox
+{
+    width: 450px;
+    margin: 5px;
+}
+.commandwrapper
+{
+    display: inline-block;
+    position: relative;
+    color: #001F3E;
+    margin: 0px;
+    height: 25px;
+    padding: 1px 5px 1px 5px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    background: #9AADC0;
+    border: 1px solid #617F9D;
+}
+#demandes .commandwrapper
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    color: #001F3E;
+    margin: 0px;
+    height: 25px;
+    padding: 1px 5px 1px 5px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    background: #9AADC0;
+    border: 1px solid #617F9D;
+}
+
+.ui-tooltip, .arrow:after {
+    background: #F0F8FF;
+    border: 2px solid #617F9D;
+    opacity: 0.9;
+}
+.ui-tooltip {
+    padding: 10px 20px; 
+    border-radius: 5px;
+    box-shadow: 0 0 7px black;
+}
+.tablesorter-filter {
+    min-width: 100px;
+}
+.topactivitytitle
+{
+    padding: 5px;
+    background: #F0F8FF;
+    color: #001F3E;
+    border-bottom: 1px solid #A3C9EF;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-height: 60px;
+    overflow: auto;
+}
+.topactivitytitle h2
+{
+    margin: auto;
+}
+.activity {
+    border-radius: 5px; 
+    border: 2px solid #000;
+    background-color: #EAF4FF;
+    background: #F0F8FF url(images/background.png) top left repeat-x;
+}
+/* Use this next selector to style things like font-size and line-height: */
+.activity .tooltipster-content {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 8px 10px;
+}
+
+
+.notification
+{
+    font-family: Arial;
+    border: 1px solid #001F3E;
+    color:#001F3E;
+    padding: 0px;
+    line-height:30px;
+    background: #EAF4FF;
+    font-size:14px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: table;
+    width: 99%;
+}
+.notification div 
+{
+    display: table-cell;
+    height: 100%;
+}
+.typeindicator
+{
+    width: 3%;
+    font-family:FontAwesome;
+    margin:5px;
+    line-height: 200%;
+    font-size:100%;
+    border: 1px solid black;
+    vertical-align: middle;
+    border: 0px;
+    border-style: inherit;
+    border-width: 0px;
+    border-right-width: 1px;
+    border-color: #001F3E;
+    border-style: inherit;
+    padding: 1%;
+    color: white;
+}
+.notificationtextcontainer
+{
+    padding-left: 3%;
+}
+.read 
+{
+    opacity: 0.5;
+    border: 1px dotted black;
+}
+.notread 
+{
+    border: 1px solid darkred;
+}
+.notread .notificationtextcontainer
+{
+    background: #FFFECF;
+}
+.notification_link
+{
+    text-decoration: none !important;
+}
+.notification:hover
+{
+    background: #A3C9EF;
+}
+.notification p
+{
+    padding: 0px;
+    text-align: left;
+}
+.Gestion_de_la_plateforme .typeindicator
+{
+    background: #617F9D;
+}
+.Calendrier .typeindicator
+{
+    background: #A3C9EF;
+}
+.Forum .typeindicator
+{
+    background: #46a546;
+}
+.Fichiers .typeindicator
+{
+    background: darkred;
+}
+.NOTIF_ON_NEW_FILE:before
+{
+    content: "\f07c";
+}
+.NOTIF_ON_DELETE_FILE:before
+{
+    content: "\f07c";
+}
+.NOTIF_ON_NEW_FOLDER:before
+{
+    content: "\f07c";
+}
+.NOTIF_ON_DELETE_FOLDER:before
+{
+    content: "\f07c";
+}
+.NOTIF_ON_NEW_EVENT:before
+{
+    content: "\f073";
+}
+.NOTIF_ON_DELETE_EVENT:before
+{
+    content: "\f073";
+}
+.NOTIF_ON_NEW_MESSAGE:before
+{
+    content: "\f075";
+}
+.NOTIF_ON_DELETE_MESSAGE:before
+{
+    content: "\f075";
+}
+.NOTIF_ON_NEW_SUBJECT:before
+{
+    content: "\f075";
+}
+.NOTIF_ON_DELETE_SUBJECT:before
+{
+    content: "\f075";
+}
+.NOTIF_ON_NEW_CATEGORY:before
+{
+    content: "\f075";
+}
+.NOTIF_ON_DELETE_CATEGORY:before
+{
+    content: "\f075";
+}
+.NOTIF_ON_ACCEPT_USER:before
+{
+    content: "\f007";
+}
+.NOTIF_ON_BAN_USER:before
+{
+    content: "\f007";
+}
+.NOTIF_ON_BLOCK_USER:before
+{
+    content: "\f007";
+}
+.NOTIF_ON_CHANGE_PERM_USER:before
+{
+    content: "\f013";
+}
+.NOTIF_ON_EJECT_USER:before
+{
+    content: "\f007";
+}
+.NOTIF_ON_PLATFORM_EDIT:before
+{
+    content: "\f013";
+}
+.NOTIF_ON_SET_ADMIN:before
+{
+    content: "\f007";
+}
+.NOTIF_ON_SET_MODERATOR:before
+{
+    content: "\f007";
+}
+.NOTIF_ON_SET_MEMBER:before
+{
+    content: "\f007";
+}
+.NOTIF_ON_UNBAN_USER:before
+{
+    content: "\f007";
+}
+.NOTIF_ON_UNBLOCK_USER:before
+{
+    content: "\f007";
+}
+.NOTIF_ON_NEW_ASK_TO_JOIN::before
+{
+    content: "\f007";
+}
+.load_more_notifications, .notification_loader
+{
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px !important;
+}
+.notification_loader
+{
+    display: none;
+}
+
+.profile_picture
+{
+    height: 50px;
+    float: left;
+    border: 3px solid #001F3E;
+}
+.userman_profile
+{
+    display: inline-block;
+    text-align: left;
+    margin: 5px;
+    cursor: pointer;
+    padding: 5px;
+    width: auto !important;
+}
+.profile_hover
+{
+    float: left;
+    display: none;
+}
+.filters
+{
+    border: 1px dotted #001F3E;
+    padding: 10px;
+    float: right;
+}
+.asking_accept
+{
+    color: green;
+}

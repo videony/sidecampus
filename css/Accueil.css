@@ -1,0 +1,214 @@
+h1.main_site_title {
+    text-align: center;
+    font-size: 40px;
+    margin: 30px auto;
+}
+.sidecampus
+{
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border: none !important;
+    height: 70px;
+    float: none;
+}
+.description
+{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+/*************************************
+ * generic styling for ALS elements
+ ************************************/
+
+.als-container {
+	position: relative;
+	width: 99%;
+	margin: 0px auto;
+	z-index: 0;
+}
+
+.als-viewport {
+	position: relative;
+	overflow: hidden;
+	margin: 0px auto;
+}
+
+.als-wrapper {
+	position: relative;
+	list-style: none;
+        margin: 0px !important;
+}
+
+.als-item {
+	position: relative;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+
+.als-prev, .als-next {
+	position: absolute;
+	cursor: pointer;
+	clear: both;
+}
+/*************************************
+ * specific styling for #slideshow
+ ************************************/
+.register-sidecampus {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    z-index: 50;
+}
+.slideshow-element {
+    position: relative;
+    display: none;
+    z-index: 20;
+}
+.slideshow-text {
+    position: absolute;
+    top: 200px;
+    z-index: 50;
+    text-align: center;
+    width: 100%;
+}
+.slideshow-text span {
+    border: 1px solid #001F3E;
+    border-radius: 5px;
+    background: #415567;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    
+}
+.slideshow-image {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+.slideshow-image img {
+    display: block;
+    margin: 0 auto;
+    float: none;
+    border-radius: 0px;
+    opacity: 0.8;
+    max-height: 400px;
+    border: 1px solid #001F3E;
+}
+.slideshow-circle {
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    z-index: 50;
+    width: 100%;
+}
+.big-icon
+{
+    background: white;
+    color: #415567;
+    border: 1px solid #001F3E;
+    font-size: 100px;
+    padding: 10px;
+    line-height: 100px;
+    border-radius: 80px;
+    padding: 30px;
+    width: 105px;
+}
+.element-big-icon
+{
+    background: white;
+    color: #415567;
+    border: 1px solid #001F3E;
+    font-size: 100px;
+    padding: 10px;
+    line-height: 100px;
+    border-radius: 80px;
+    padding: 30px;
+    width: 105px;
+    margin-top: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.box-descr
+{
+    margin: 2px;
+    margin-top: 50px;
+}
+
+.last-one
+{
+    margin-top: 19px;
+}
+.box-descr h2{
+    margin: 50px;
+}
+.box-descr b{
+    background-color: lightblue;
+}
+
+
+#slideshow .als-prev, #slideshow .als-next {
+	top: 100px;
+        opacity: 0.2;
+}
+
+#slideshow .als-prev {
+	left: 10px;
+        z-index: 60;
+}
+
+#slideshow .als-next {
+	right: 10px;
+        z-index: 60;
+}
+@media only screen and (max-device-width: 900px)
+{
+    .slideshow-image {
+        margin-top: 40px;
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+    }
+    .slideshow-text span {
+        font-size: 20px;
+    }
+    .slideshow-image img {
+        width: 100%;
+    }
+    .sidecampus
+    {
+        width: 100px;
+        height: auto;
+        margin-bottom: 13px;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        text-align: center !important;
+    }
+    #slideshow .als-prev {
+	left: 0px;
+    }
+
+    #slideshow .als-next {
+            right: 0px;
+    }
+    #slideshow h2 {
+        font-size: 12px;
+    }
+    .big-icon
+    {
+        background: white;
+        color: #415567;
+        border: 1px solid #415567;
+        font-size: 50px;
+        padding: 10px;
+        line-height: 50px;
+        border-radius: 10px;
+    }
+}

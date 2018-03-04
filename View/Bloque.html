@@ -1,0 +1,222 @@
+<div class="info mobile-device">
+    <div style='text-align: center'>
+        <span class='icon icon-info-sign'></span><br/>
+    </div>
+    Dû à la complexité de cette page, il est possible que certaines fonctionnalités ne soient pas présentes.
+    Pour éditer et gérer le planning de bloque, veuillez utiliser un ordinateur. Merci de votre compréhension.
+</div>
+<div class="buttonwrapper">
+    <button class="button reset right">
+        <span class="icon icon-undo"></span>
+        Réinitialiser mon planning de bloque
+    </button>
+    <button class="button right add_semaine">
+        <span class="icon icon-plus-sign"></span>
+        Ajouter une semaine de bloque
+    </button>
+</div>
+<div class="add_form">
+    <label for="dt_lundi">Commençant le</label><br/>
+    <input type="text" id="dt_lundi" name="dt_lundi" value="">
+    <button class="button add_semaine_form">
+        <span class="icon icon-plus-sign"></span>
+        Ajouter
+    </button>
+</div>
+<!-- ###SUB_SEMAINE### -->
+<table class="sortIt" id="###ID_SEMAINE_BLOQUE###">
+    <thead>
+        <tr>
+            <th><span class="icon icon-16 icon-remove delete_semaine"></span></th>
+            <th>H</th>
+            <th class="day_col">LUN</th>
+            <th class="day_col">MAR</th>
+            <th class="day_col">MER</th>
+            <th class="day_col">JEU</th>
+            <th class="day_col">VEN</th>
+            <th class="day_col">SAM</th>
+            <th class="day_col">DIM</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ###SUB_ROW### -->
+        <tr>
+            <td>
+                <div class="vertical-text container">
+                    ###DATE_DEPART### <br/>
+                    <span class="icon icon-16 icon-chevron-down"></span><br/> 
+                    ###DATE_FIN###
+                </div>
+                <div class='range_selector'>
+                    <input type="number" class="min_range" value="###MIN_RANGE###" min="0" max="23" />
+                    <span class="icon icon-64 icon-resize-vertical"></span>
+                    <input type="number" class="max_range" value="###MAX_RANGE###" min="0" max="23"/>
+                </div>
+                
+            </td>
+            <td>
+                <!-- ###SUB_INTERVAL### -->
+                <div class="interval" id="###HOUR###">###HOUR###</div>
+                <!-- ###SUB_INTERVAL### -->
+            </td>
+            <td class="day_col">
+                <div class="container">
+                    <!-- ###SUB_MONDAY_SESSION### -->
+                    <div class="session ###COLORS### ###RESIZE###" id="###ID_SESSION###" style="height: ###HEIGHT###px;top: ###TOP###px">
+                        <div>
+                            <span class="solid_course">###TX_SUJET###</span>
+                            
+                            <form method="POST" class="form_course">
+                                <input type="text" class="course_field" value="###TX_SUJET###"/>
+                                <!-- ###IF_REMOVE### -->
+                                    <span class="icon icon-32 icon-remove right delete_session"></span>
+                                    <span class="icon icon-32 icon-dashboard right change_color"></span>
+                                    <span class="icon icon-32 icon-check right validate"></span>
+                                <!-- ###IF_REMOVE### -->
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                    <!-- ###SUB_MONDAY_SESSION### -->
+                </div>
+            </td>
+            <td class="day_col">
+                <div class="container">
+                    <!-- ###SUB_TUESDAY_SESSION### -->
+                    <div class="session ###COLORS### ###RESIZE###" id="###ID_SESSION###" style="height: ###HEIGHT###px;top: ###TOP###px">
+                        <div>
+                            <span class="solid_course">###TX_SUJET###</span>
+                            
+                            <form method="POST" class="form_course">
+                                <input type="text" class="course_field" value="###TX_SUJET###"/>
+                                <!-- ###IF_REMOVE### -->
+                                    <span class="icon icon-32 icon-remove right delete_session"></span>
+                                    <span class="icon icon-32 icon-dashboard right change_color"></span>
+                                    <span class="icon icon-32 icon-check right validate"></span>
+                                <!-- ###IF_REMOVE### -->
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                    <!-- ###SUB_TUESDAY_SESSION### -->
+                </div>
+            </td>
+            <td class="day_col">
+                <div class="container">
+                    <!-- ###SUB_WEDNESDAY_SESSION### -->
+                    <div class="session ###COLORS### ###RESIZE###" id="###ID_SESSION###" style="height: ###HEIGHT###px;top: ###TOP###px">
+                        <div>
+                            <span class="solid_course">###TX_SUJET###</span>
+                            
+                            <form method="POST" class="form_course">
+                                <input type="text" class="course_field" value="###TX_SUJET###"/>
+                                <!-- ###IF_REMOVE### -->
+                                    <span class="icon icon-32 icon-remove right delete_session"></span>
+                                    <span class="icon icon-32 icon-dashboard right change_color"></span>
+                                    <span class="icon icon-32 icon-check right validate"></span>
+                                <!-- ###IF_REMOVE### -->
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                    <!-- ###SUB_WEDNESDAY_SESSION### -->
+                </div>
+            </td>
+            <td class="day_col">
+                <div class="container">
+                    <!-- ###SUB_THURSDAY_SESSION### -->
+                    <div class="session ###COLORS### ###RESIZE###" id="###ID_SESSION###" style="height: ###HEIGHT###px;top: ###TOP###px">
+                        <div>
+                            <span class="solid_course">###TX_SUJET###</span>
+                            
+                            <form method="POST" class="form_course">
+                                <input type="text" class="course_field" value="###TX_SUJET###"/>
+                                <!-- ###IF_REMOVE### -->
+                                    <span class="icon icon-32 icon-remove right delete_session"></span>
+                                    <span class="icon icon-32 icon-dashboard right change_color"></span>
+                                    <span class="icon icon-32 icon-check right validate"></span>
+                                <!-- ###IF_REMOVE### -->
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                    <!-- ###SUB_THURSDAY_SESSION### -->
+                </div>
+            </td>
+            <td class="day_col">
+                <div class="container">
+                    <!-- ###SUB_FRIDAY_SESSION### -->
+                    <div class="session ###COLORS### ###RESIZE###" id="###ID_SESSION###" style="height: ###HEIGHT###px;top: ###TOP###px">
+                        <div>
+                            <span class="solid_course">###TX_SUJET###</span>
+                            
+                            <form method="POST" class="form_course">
+                                <input type="text" class="course_field" value="###TX_SUJET###"/>
+                                <!-- ###IF_REMOVE### -->
+                                    <span class="icon icon-32 icon-remove right delete_session"></span>
+                                    <span class="icon icon-32 icon-dashboard right change_color"></span>
+                                    <span class="icon icon-32 icon-check right validate"></span>
+                                <!-- ###IF_REMOVE### -->    
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                    <!-- ###SUB_FRIDAY_SESSION### -->
+                </div>
+            </td>
+            <td class="day_col">
+                <div class="container">
+                    <!-- ###SUB_SATURDAY_SESSION### -->
+                    <div class="session ###COLORS### ###RESIZE###" id="###ID_SESSION###" style="height: ###HEIGHT###px;top: ###TOP###px">
+                        <div>
+                            <span class="solid_course">###TX_SUJET###</span>
+                            
+                            <form method="POST" class="form_course">
+                                <input type="text" class="course_field" value="###TX_SUJET###"/>
+                                <!-- ###IF_REMOVE### -->
+                                    <span class="icon icon-32 icon-remove right delete_session"></span>
+                                    <span class="icon icon-32 icon-dashboard right change_color"></span>
+                                    <span class="icon icon-32 icon-check right validate"></span>
+                                <!-- ###IF_REMOVE### -->
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                    <!-- ###SUB_SATURDAY_SESSION### -->
+                </div>
+            </td>
+            <td class="day_col">
+                <div class="container">
+                    <!-- ###SUB_SUNDAY_SESSION### -->
+                   <div class="session ###COLORS### ###RESIZE###" id="###ID_SESSION###" style="height: ###HEIGHT###px;top: ###TOP###px">
+                        <div>
+                            <span class="solid_course">###TX_SUJET###</span>
+                            
+                            <form method="POST" class="form_course">
+                                <input type="text" class="course_field" value="###TX_SUJET###"/>
+                                <!-- ###IF_REMOVE### -->
+                                    <span class="icon icon-32 icon-remove right delete_session"></span>
+                                    <span class="icon icon-32 icon-dashboard right change_color"></span>
+                                    <span class="icon icon-32 icon-check right validate"></span>
+                                <!-- ###IF_REMOVE### -->
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                    <!-- ###SUB_SUNDAY_SESSION### -->
+                </div>
+            </td>
+            
+        </tr>
+        
+        <!-- ###SUB_ROW### -->
+    </tbody>
+</table>
+<!-- ###SUB_SEMAINE### -->

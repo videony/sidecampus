@@ -1,0 +1,71 @@
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{
+    font-size: 14px !important;
+    font-family: Arial !important;
+}
+.ui-widget
+{
+    font-size: 14px !important;
+    font-family: Arial !important;
+}
+#tabs
+{
+    background-color: #F0F8FF !important;
+    border: 1px solid #001F3E !important;
+}
+.ui-widget-header
+{
+    background:#6582A0 !important;
+    border-bottom: 1px solid #001F3E;
+}
+ui-state-default ui-corner-top ui-tabs-active ui-state-active
+{
+    background-color: #F0F8FF !important;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
+{
+    color: #6582A0 !important;
+    
+}
+.ui-widget-content
+{
+    background-color: #F0F8FF !important;
+    border: 1px solid #001F3E !important;
+}
+.ui-tabs-panel
+{
+    border: none !important;
+}
+#filelist span
+{
+    display: block;
+    margin-left: 0px;
+    font-family: Arial;
+    border: 1px solid #001F3E;
+    padding: 5px;
+    line-height: 20px;
+    background: #617F9D;
+    color: #F0F8FF;
+    font-weight: bold;
+    font-size: 14px;
+}
+#connexion_fieldset
+{
+    border: none;
+}
+#event_frequency, #todo_frequency
+{
+    border: 1px solid #001F3E;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 80%
+}
+@media only screen and (max-device-width: 900px)
+{
+    .datefield{
+        width: 80%;
+    }
+    .button{
+        margin: 10px;
+    }
+}

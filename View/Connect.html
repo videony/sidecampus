@@ -1,0 +1,41 @@
+<div class="buttonwrapper">  
+    <a href="request.php?action=PasswordForgotten" style="float:right">
+        <button class="button">
+            <img src="media/icons/link_break.png" />
+            Mot de passe oublié?
+        </button>
+    </a>
+</div>
+<div style="clear:both"></div>
+<!-- ###IF_SUCCESS_LOGIN### -->
+<div class="success">Vous êtes désormais connecté! Bienvenue ###LOGIN###</div>
+<!-- ###IF_SUCCESS_LOGIN### -->
+<!-- ###IF_ERROR_LOGIN### -->
+<div class="error">###ERROR_MESSAGE###</div>
+
+<!-- ###IF_ERROR_LOGIN### -->
+<!-- ###IF_LOGOUT### -->
+<div class="success">Vous avez été déconnecté avec succès.</div>
+<!-- ###IF_LOGOUT### -->
+<br/>
+<!-- ###IF_LOGIN_FORM### -->
+<form method="POST" action="request.php?action=Connect">
+<fieldset>
+<legend><h2>LOGIN</h2></legend>
+
+	<label for="login">Login ou e-mail</label>
+	<input type="text" id="login" name="login" value="###LOGIN###" style="width: 40%" /><br/>
+	<label for="mdp">Votre mot de passe</label>
+	<input type="password" id="mdp" name="mdp" style="width: 40%" class='hash'/><br/>
+	<br/>
+		<input type="checkbox" id="remember_me" name="remember_me" /> Se souvenir de moi (nécessite l'utilisation des cookies)
+        <div class="buttonwrapper">
+            <button class="button right" name="submit_button">
+                <img src="media/icons/key_go.png" />
+                Se connecter
+            </button>
+        </div>
+</fieldset>
+</form>
+<!-- ###IF_LOGIN_FORM### -->
+

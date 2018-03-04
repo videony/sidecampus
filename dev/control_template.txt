@@ -1,0 +1,53 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of ###CLASS###Controller
+ *
+ */
+class ###CLASS###Controller implements BodyController{
+  
+    private $css = array(
+        ###CSS###
+    );
+    private $js = array(
+       ###JS###
+    );
+    
+    public function canAccess() {
+        return FALSE;
+    }
+    public function getTitle() {
+        return '###PAGE###';
+    }
+
+    
+
+    public function getContent() {
+        return GenerateUtils::getTemplate('###CLASS###');
+    }
+
+    public function getJS() {
+        return $this->js;
+    }
+    public function getCSS() {
+        return $this->css;
+    }
+
+    public function handlePostRequest() {
+        if(!isset($_POST['action']))
+           return '';
+        switch($_POST['action'])
+        {
+            default:
+                return '';
+                break;
+        }
+    }
+
+}

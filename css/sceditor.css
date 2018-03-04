@@ -1,0 +1,30 @@
+.formated_textarea
+{
+    min-width: 850px;
+    min-height: 300px;
+}
+.code
+{
+    padding: 5px;
+    width: 95%;
+    margin-left: 2%;
+    background-color: #deedf7;
+    color: black;
+    font-family: Courier;
+    border: 1px solid black;
+}
+.quote
+{
+    padding: 5px;
+    min-height: 50px;
+    width: 95%;
+    margin-left: 2%;
+    background-color: #deedf7;
+    color: black;
+    font-family: Verdana;
+    border: 1px solid black;
+    background: #FFE6A4 url("../media/pics/quote.png") no-repeat right top;
+    font-style: italic;
+    font-size: 12px;
+}
+

@@ -1,0 +1,142 @@
+.annonce
+{
+    border: 1px solid #001F3E;
+    width: 90%;
+    margin: 2%;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.price{
+    float: right;
+    padding: 5px;
+    margin: 5px;
+    background-color: #f16f5c;
+    border: 1px solid darkred;
+    font-size: 150%;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.user, .description {
+    float: left;
+}
+.description {
+    margin-left: 10px;
+}
+.user .icon {
+    background: #617F9D;
+    color: white;
+    border: 1px solid #001F3E;
+    margin: 5px;
+}
+.titre {
+    background: #617F9D;
+    color: white;
+    border: 1px solid #001F3E;
+    margin: 5px;
+    width: auto;
+    display: inline-block;
+    height: 30px;
+    font-size: 150%;
+    line-height: 30px;
+    padding: 1%;
+}
+p
+{
+    font-size: 14px;
+}
+.contact
+{
+    clear:both;
+    margin: 0px;
+    border: 0px;
+    border-top: 1px solid #001F3E;
+    line-height: 30px;
+}
+.contact .icon
+{
+    font-size: 20px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.reponses, .contact_form
+{
+    display: none;
+}
+.reponse, .contact_form
+{
+    width: 95%;
+    margin: 1%;
+    padding: 1%;
+    border: 1px dotted #001F3E;
+}
+.view_messages{
+    cursor: pointer;
+}
+.contact_form textarea, .contact_form input{
+    width: 80%;
+}
+.name_error, .mail_error{
+    color: darkred;
+    background: #f16f5c;
+}
+.error {
+    color: black;
+}
+.top_button
+{
+    font-weight: normal;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    margin-right: 4%;
+}
+.top_button .icon{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.create {
+    background: #8ae234;
+    color: darkgreen;
+    border: 1px solid green;
+    float: left !important;
+    margin-left: 4%;
+}
+.command{
+    margin-right: 2%;
+}
+#search
+{
+    line-height: 20px;
+    height: 21px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -4px;
+    font-size: 12px;
+}
+.search_button{
+    line-height: 24px;
+    height: 25px;
+}
+.search_button:hover {
+    background: #617F9D;
+    color: #F0F8FF;
+}
+@media only screen and (max-device-width: 900px)
+{
+    .button input {
+        width: 70%;
+    }
+    .buttonwrapper {
+        text-align: center !important;
+    }
+    .top_button {
+        display: inline-block;
+        float: none !important;
+        margin: 5px;
+        width: 90%;
+    }
+    .titre {
+        height: auto;
+    }
+}

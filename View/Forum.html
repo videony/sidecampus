@@ -1,0 +1,58 @@
+<h1>Forum</h1>
+
+
+<!--<form method="POST" action="request.php?action=ForumTopicCreate">-->
+<!-- IF_CAN_CREATE_CATEGORY -->
+    <div class="formwrapperForum">         
+        <a href="request.php?action=ForumCategoriesCreate">
+           <button class="button" >
+               <img src="media/icons/topic_add.png" alt="nouvelle catégorie" />
+               Créer une nouvelle catégorie
+           </button>
+        </a>
+
+    </div>
+<!-- IF_CAN_CREATE_CATEGORY -->
+<!--</form>-->
+<table id='forum' class="sortIt">
+    <thead>
+        <tr>            
+            <th width="500" data-placeholder="Catégorie...">Catégorie</th>
+            <th data-placeholder="Créée par...">Créée par</th>
+            <th data-placeholder="Dernière réponse..." width="150">Dernière réponse</th> 
+            <th class="filter-false">#</th>     
+            <th class="filter-false"></th>
+        </tr>
+
+    </thead>
+    <tbody>
+         <!-- ###SUB_ITEM### -->
+         <tr class="cat###ID_CATEGORIE###">
+             <td>                
+                 <a href="request.php?action=ForumCategories&amp;idcategorie=###ID_CATEGORIE###">
+                     <b><u>###NOM_CATEGORIE###</u></b>
+                 </a>
+             </td>
+            <td>###TX_LOGIN###</td>
+            <td>###DATE_LAST_POST###</td>  
+            <td class="count_col"><div>###TOPIC_CNT###</div></td>   
+            
+            
+            <td>  
+                <div class="commandwrapper">
+
+                <!-- CATED###ID_CATEGORIE### -->              
+                        <img src="media/icons/comment_edit.png" class="tooltip editC" id="###ID_CATEGORIE###"/> 
+                <!-- CATED###ID_CATEGORIE### -->  
+                <!-- CATDEL###ID_CATEGORIE### -->
+                        <img src="media/icons/cross.png" class="tooltip deleteC" id="###ID_CATEGORIE###"/> 
+                <!-- CATDEL###ID_CATEGORIE### -->
+                </div>
+            </td>  
+                
+           
+         </tr>
+          <!-- ###SUB_ITEM### -->
+    </tbody>
+</table>
+    

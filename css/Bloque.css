@@ -1,0 +1,185 @@
+#bloque
+{
+    
+}
+td{
+    padding: 0px !important;
+    position: relative;
+}
+td:first-child, th:first-child,
+td:nth-child(2), th:nth-child(2)
+{
+    width: 30px;
+    text-align: center;
+}
+.vertical-text
+{
+    font-size: 14px;
+    line-height: 30px;
+    vertical-align: middle;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+td div.container
+{
+    
+}
+.interval{
+    height: 20px;
+    line-height: 20px;
+    border-bottom: 1px solid black;
+}
+td:nth-child(2) .interval:last-child
+{
+    border-bottom: 0px;
+}
+.session
+{
+    border: 1px solid black;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 2;
+    left: -1px !important;
+}
+.session:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    /* adjust for white space between pseudo element and next sibling */
+    margin-right: -.25em;
+    /* stretch line height */
+    height: 100%; 
+}
+.session div
+{
+  display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.green{
+    background: #C6E746;
+}
+.red {
+    background: #EE5757;
+    color: #F0F8FF;
+}
+.blue {
+    background: #0099FF;
+}
+.orange {
+    background: #FFBD11;
+}
+.beige {
+    background: navajowhite;
+}
+.brown {
+    background: #9e8255;
+    color: white;
+}
+.gray {
+    background: #8699a4;
+}
+.resizable {
+    z-index: 10 !important;
+}
+.resizable form {
+    display: none;
+}
+.delete_session, .delete_semaine
+{
+    color: darkred;
+    background: #EE5757;
+    border: 1px solid darkred;
+}
+.validate
+{
+    color: darkgreen;
+    background: #8ae234;
+    border: 1px solid darkgreen;
+}
+.icon-32 {
+    font-size: 25px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.min_range, .max_range
+{
+    text-align: center;
+    width: 40px;
+}
+.form_course .icon
+{
+    margin: 5px;
+}
+.reset{
+    background: #EE5757;
+    color: darkred;
+    border: 1px solid darkred;
+}
+.add_semaine {
+    color: darkgreen;
+    background: #8ae234;
+    border: 1px solid darkgreen;
+}
+.add_form
+{
+    width: 150px;
+    text-align: center;
+}
+.add_form .button, #dt_lundi{
+    margin: 5px;
+    max-width: 95%;
+}
+.add_form {
+    display: none;
+}
+.add_semaine_form {
+    display: inline;
+}
+.mobile-device {
+    display: none;
+}
+.ui-datepicker  {
+    z-index: 21001 !important;
+}
+@media only screen and (max-device-width: 900px)
+{
+    .mobile-device {
+        display: block;
+    }
+    td:first-child, th:first-child,
+    td:nth-child(2), th:nth-child(2)
+    {
+        width: 20px !important;
+        max-width: 20px;
+        font-size: 10px !important;
+        text-align: center;
+    }
+    .icon-32, .icon-64 {
+        font-size: 10px;
+        line-height: 15px;
+        cursor: pointer;
+        width: auto;
+    }
+    .range_selector
+    {
+        display: none;
+    }
+    .vertical-text
+    {
+        font-size: 10px;
+        line-height: 20px;
+        vertical-align: middle;
+        border-bottom: 1px solid black;
+        margin-bottom: 5px;
+    }
+    .icon-info-sign
+    {
+        font-size: 40px;
+        line-height: 60px;
+    }
+}

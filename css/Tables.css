@@ -1,0 +1,70 @@
+table.sortIt
+{
+    border: 1px solid #001F3E;
+    border-collapse: collapse;
+    width: 100%;
+}
+table.sortIt th
+{
+    border: 2px solid #001F3E;
+    text-align: center;
+    padding: 5px;
+    background: #617F9D;
+    color: white;
+}
+table.sortIt th.filter_field input
+{
+    font-family: Arial;
+    border: 1px solid #001F3E;
+    padding:5px;
+    line-height:20px;
+    background: #617F9D;
+    color:#F0F8FF;
+    font-weight:bold;
+    font-size:14px;
+}
+table.sortIt td
+{
+    border: 1px solid #001F3E;
+    padding: 5px;
+}
+table.sortIt tr:nth-child(odd)
+{
+    background-color: #CDD7E0;
+}
+/* This css is already contained within each theme file */
+/* filter row */
+.tablesorter-filter-row td {
+  background: #617F9D;
+}
+/* optional disabled input styling */
+.tablesorter-filter-row .disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: not-allowed;
+}
+
+/* filters */
+.tablesorter-filter {
+    min-width: 50px;
+  width: 95%;
+  height: inherit;
+  margin: 4px;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  color: #333;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: height 0.1s ease;
+  -moz-transition: height 0.1s ease;
+  -o-transition: height 0.1s ease;
+  transition: height 0.1s ease;
+}
+.reset
+{
+    margin-bottom: 20px;
+}
+    
+

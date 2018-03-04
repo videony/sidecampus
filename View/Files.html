@@ -1,0 +1,221 @@
+<div class="wrapper">
+    <div class="top_commands">
+        <span class="icon icon-64 icon-circle-arrow-left left filecommand up_folder" style="color: greenyellow"></span>
+        
+       
+        <form method="POST" id="chemin_form">
+            <input type="text" name="chemin" id="chemin" value="###CHEMIN###"/>
+        </form>
+        <!-- ###IF_CAN_ADD_FILES_BUTTON### -->
+        <span class="icon icon-64  icon-plus-sign-alt right tooltip filecommand add_file" title="Ajouter des fichiers"></span>
+        <!-- ###IF_CAN_ADD_FILES_BUTTON### -->
+        <!-- ###IF_CAN_ADD_FOLDER_BUTTON### -->
+        <span class="icon icon-64 icon-folder-open right tooltip filecommand add_folder" title="Nouveau dossier" style="color: lightyellow"></span>
+        <!-- ###IF_CAN_ADD_FOLDER_BUTTON### -->
+       
+        
+         <div style="clear:both"></div>
+    </div>
+    <!-- ###IF_CAN_ADD_FILES### -->
+    <div id="add_file_form">
+
+                  <div id="container">
+                      <p style="color:white;font-size:20px;text-align:center">Ajouter des fichiers</p><br/><br/>
+                      <div class="info">
+                          <img src="media/icons/information.png">
+                          Pour envoyer des fichiers dans ce dossier, parcourez vos fichiers et cliquez sur "envoyer". 
+                          Une fois cette opération faite, vous aurez l'occasion d'écrire un éventuel commentaire sur
+                          chacun d'entre eux.
+                      </div>
+                      <div class="error">
+                          <img src="media/icons/exclamation.png"/> 
+                          Gardez à l'esprit que s'il existe déjà des fichiers de même nom que ceux que vous uploadez, ceux-ci
+                          seront remplacés par votre version. Aucune sauvegarde ne sera assurée par le serveur.
+                      </div>
+                      <div class="error">
+                          <img src="media/icons/exclamation.png"/> 
+                          Les fichiers de plus de <span id="max_upload_size">###MAX_UPLOAD_SIZE###</span> Mo ne seront pas uploadés.
+                          <span id="max_download_size" style="display: none">###MAX_DOWNLOAD_SIZE###</span>
+                      </div>
+                      <span class="button left" id="browse" style="margin: 20px">
+                          <img src="media/icons/folder_magnify.png" alt="" />
+                          Parcourir mes fichiers
+                      </span>
+                <div style="clear: both"></div>
+                      <div id="filelist">
+
+                    </div>
+                <br/><br/>
+                        <div id="start-upload-wrapper">
+                            <input type="checkbox" id="extract_archives" name="extract_archives" value="No"/> 
+                            <span>Extraire les fichiers .zip et .rar (l'extraction peut <b>prendre du temps</b>
+                            pour certains fichiers)</span>  <br/>
+                        
+                            <span class="button left" id="start-upload" style="margin: 20px">
+                                <img src="media/icons/picture_save.png" alt="" />
+                                Envoyer les fichiers
+                            </span><br/>
+                            <div id="upload_in_progress">Upload en cours... Merci d'être patient.</div>
+                        </div>
+                <div style="clear: both"></div>
+                  </div>
+    </div>
+    <!-- ###IF_CAN_ADD_FILES### -->
+    <div id="selection">
+        <div id="select_commands " class="right" style="width: 100%;">
+            <div class="commandwrapper left check_uncheck_container">
+                <input type="checkbox" id="check_uncheck_all"/> Tout sélectionner/déselectionner
+            </div>
+            
+            <!-- ###IF_CAN_MOVE_FILES### -->
+            <span class="icon icon-64 icon-paste right paste tooltip filecommand" title="Coller"></span>
+            <span class="icon icon-64 icon-cut right cut tooltip filecommand" title="Couper"></span>
+            <span class="icon icon-64 icon-copy right copy tooltip filecommand" title="Copier"></span>
+            <!-- ###IF_CAN_MOVE_FILES### -->
+            
+            <!-- ###IF_CAN_REMOVE_FILES### -->
+            <span class="icon icon-64 icon-remove-circle right delete tooltip filecommand" style="color: tomato;" title="Supprimer"></span>
+            <!-- ###IF_CAN_REMOVE_FILES### -->
+            
+            <div style='clear:both'></div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div class="display">
+        <span class="icon icon-64 icon-refresh right refresh tooltip filecommand" title="Rafraichir"></span>
+        <span class="icon icon-64 icon-zoom-out right make3perline tooltip filecommand" title="Dézoomer"></span>
+        <span class="icon icon-64 icon-zoom-in right make2perline tooltip filecommand" title="Zoomer"></span>
+
+        <div style="clear:both"></div>
+    </div>
+    
+    <div id="fileswrapper">
+    <!-- ###SUB_FILELIST### -->
+        
+            <!-- ###SUB_FOLDER_ITEM### -->
+            <div id="###ID_FOLDER###" class="fileline folderline ###FOLDER_CLASSES###">
+                <div class="commandwrapper right">
+                    <!-- ###IF_RENAME_FOLDER### -->
+                    <img src="media/icons/page_edit.png" alt="" class="tooltip rename_folder"  title="Renommer"/>
+                    <!-- ###IF_RENAME_FOLDER### -->
+                    <input type="checkbox" class="file_checkbox" />
+                </div>
+                <div class="file_descr" title="###TX_NAME###">
+                    <img src="media/file_icons/folder.png" alt="" class="big_icon"/>
+                    <b class="foldername" title="###TX_NAME###"><u>###TX_SHORTNAME###</u></b><br/><br/>
+                    <i><span class="size">###INT_SIZE###</span> <span class="size_unit">###SIZE_UNIT###</span></i>
+                </div>
+            </div>
+            <!-- ###SUB_FOLDER_ITEM### --> 
+        
+            <!-- ###SUB_FILE_ITEM### -->
+            <div id="###ID_FILE###" class="fileline ###FILE_CLASSES###" >
+                
+                <div class="commandwrapper right">
+                    <img src="media/icons/disk.png" alt="" class="tooltip download_file" title="Télécharger"/>
+                    <!-- ###IF_RENAME### -->
+                    <img src="media/icons/pencil.png" alt="" class="tooltip rename_file" title="Renommer"/>
+                    <!-- ###IF_RENAME### -->
+                    <!-- ###IF_COMMENT_EDIT### -->
+                    <img src="media/icons/comment.png" alt="" class="tooltip comment_edit" title="Editer le commentaire"/>
+                    <!-- ###IF_COMMENT_EDIT### -->
+                    <input type="checkbox" class="file_checkbox" />
+                </div>
+                <div class="tooltip file_descr viewable" title="###TX_COMMENTAIRE###">
+                    <img src="###FILE_ICON###" alt="" class="big_icon"/>
+                    <b class="filename" title="###TX_NAME###"><u>###TX_SHORTNAME###</u></b><br/>
+                    <b id="person_###ID_PERSONNE###">###TX_LOGIN###</b><br/>
+                    <i><span class="size">###INT_SIZE###</span> <span class="size_unit">###SIZE_UNIT###</span></i>
+                </div>
+            </div>
+            <!-- ###SUB_FILE_ITEM### --> 
+        
+        <div style="clear:both"></div>
+    <!-- ###SUB_FILELIST### -->    
+    </div>
+</div>
+<!-- ###IF_CAN_ADD_FOLDER### -->
+<div id="add_folder_form">
+    <fieldset>
+        <label for="folder_name">Nom du dossier</label>
+        <input type="text" name="folder_name" id="folder_name" /><br/><br/>
+        <button class="button" id="add_folder_button">
+            <img src="media/icons/folder_add.png" alt="" />
+            Créer le dossier
+        </button>
+    </fieldset>
+</div>
+<!-- ###IF_CAN_ADD_FOLDER### -->
+<div id="edit_comment_form">
+    <fieldset>
+        <label for="comment">Commentaire</label>
+        <textarea name="comment" id="comment"></textarea><br/><br/>
+        <input type="hidden" id="edit_comment_form_id" />
+        <button class="button" id="edit_comment_button">
+            <img src="media/icons/disk.png" alt="" />
+            Sauvegarder
+        </button>
+    </fieldset>
+</div>
+<div id="rename_form">
+    <fieldset>
+        <label for="elem_name">Nom</label>
+        <input type="text" name="elem_name" id="elem_name" /><br/><br/>
+        <input type="hidden" id="rename_form_id"/>
+        <input type="hidden" id="rename_form_type"/>
+        <button class="button" id="rename_button">
+            <img src="media/icons/disk.png" alt="" />
+            Renommer
+        </button>
+    </fieldset>
+</div>
+<div id="preparing-file-modal" title="Préparation en cours...">
+    <br/>
+    <img src="media/icons/arrow_refresh.png"/><br/><br/>
+    Le fichier est en cours d'acquisition. Merci de votre patience.
+ 
+    <div class="ui-progressbar-value ui-corner-left ui-corner-right" style="width: 100%; height:22px; margin-top: 20px;"></div>
+</div>
+<div id="error-modal" title="Erreur">
+    <img src="media/icons/link_break.png"/><br/><br/>
+    Une erreur s'est produite pendant l'acquisition. Il se peut que le fichier Veuillez rééssayer à un autre moment.
+</div>
+<div id="too-big-modal" title="Erreur">
+    <img src="media/icons/link_break.png"/><br/><br/>
+    Vous ne pouvez pas télécharger plus de 50 mégas à la fois. 
+</div>
+<div id="comments_form">
+    <!-- ###SUB_COMMENTS_FORM### -->
+    <form method="POST" action="request.php?action=Files&commentsform=1">
+        <fieldset>
+            <div class="info">
+                Vous pouvez ci-dessous écrire des commentaires sur les fichiers que vous venez d'uploader.
+            </div>
+            <div class='buttonwrapper'>
+               <button class="button ignore_comments">
+                    <img src="media/icons/cross.png" alt="" />
+                    Ignorer
+                </button>
+                <button class="button save_comments">
+                    <img src="media/icons/comment_add.png" alt="" />
+                    Sauvegarder
+                </button>
+           </div>
+           <!-- ###SUB_ITEM### -->
+           <label for="###ID_FILE###">###TX_FILENAME###</label>
+           <textarea name="file_###ID_FILE###" id="###ID_FILE###" class="file_comment" ></textarea>
+           <!-- ###SUB_ITEM### -->
+           <div class='buttonwrapper'>
+               <button class="button ignore_comments">
+                    <img src="media/icons/cross.png" alt="" />
+                    Ignorer
+                </button>
+                <button class="button save_comments">
+                    <img src="media/icons/comment_add.png" alt="" />
+                    Sauvegarder
+                </button>
+           </div>
+        </fieldset>
+    </form>
+    <!-- ###SUB_COMMENTS_FORM### -->
+</div>
