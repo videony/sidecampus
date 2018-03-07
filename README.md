@@ -30,6 +30,7 @@ You will need:
 6. Write your terms of use in the View/CGU.html
 7. Add the cron/unblocker file to your crontab, or disable IP Blocker in your configuration file
 8. Test it!
+9. Securize your files. Web user should not have access to subfolders.
 
 ### Configuration
 
@@ -50,26 +51,53 @@ You will need:
 | upload.max_file_size | 100 | Maximum size a registered user can upload. |
 | download.max_file_size | 100 | Maximum size a registered user can download. |
 
-### About
+### Code structure
+The projet uses a custom lightweight web framework under the MVC design pattern. Every basic request goes trough "request.php", which is the principal entry point for the webapp. Several other entry points are present: ajax.php for Ajax requests, dfi.php for file displays, dim.php for image displays, gview.php for file previews. 
 
-## Version
+#### Controllers
+Controllers are situated under the "Control" folder. A central controller - PageController - dynamically calls the right Controller depending on "action" parameter in URI. Every controller implements a "BodyController" interface. 
+
+#### Models
+Models are situated under the "Model" folder. They all use the DB class, access point to the database
+
+#### Views
+Views are situated under the "View" folder. They are all templates. It uses a system of "markers" that have a "###MARKER###" structure. These markers are interpreted by a GenerateUtils class called from the controllers. Nothing but HTML should be used here. 
+Available structural markers are:
+* ###XXX###: variable, replaced by passed value. 
+* ###IF_XXX###: for conditional display. 
+* ###SUB_XXX###: to define a subsection of the template. It is replaced by passed value.
+* ###RS_XXX###: resultset marker, allows to directly inject a resultset in an html template.
+
+#### Other folders
+* Utils: several utilitaries classes.
+* config: contains configuration files
+* cron: contains routine scripts that can be added to a crontab
+* database: sql scripts, contains the installation script
+* css: all css files, plain css, not compiled
+* js: all javascript files. 
+* dev: development utils. Most useful one is the generate.php that allows to easily add new controllers, models,...
+* media: static images and user files. 
+
+## About
+
+### Version
 Current version is 1.0.
 
-## Contributing
+### Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/videony/sidecampus/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Authors
+### Authors
 
 * **John Mannard** - *Initial work* - [http://mannard.com/](http://mannard.com/)
 * **François Thiébaut** - *Contributions to initial work*
 
 See also the list of [contributors](https://github.com/videony/sidecampus/contributors) who participated in this project.
 
-## License
+### License
 
 This project is licensed under the Mozilla Public License - see the [LICENSE.md](https://github.com/videony/sidecampus/blob/master/LICENSE) file for details
 
-## Acknowledgments
+### Acknowledgments
 
 * Unamur: for prooftesting this webapp.
